@@ -4,20 +4,13 @@ n1:MLmodel1	n3:label	"classification_of_offensive_language20"
 n1:MLmodel2	n2:type	n1:Model
 n1:MLmodel2	n3:label	"bagging_experiment"
 n1:Human1	n2:type	n1:Human
-n1:Human1	n3:label	'George'@en
+n1:Human1	n3:label	'Saulo'@en
 n1:Human1	n1:recognizedBy	n1:Robot1
 n1:Human1	n1:recognizedBy	n1:Robot2
-n1:Human2	n2:type	n1:Human
-n1:Human2	n3:label	'Alice'@en
-n1:Human2	n1:recognizedBy	n1:Robot1
 n1:Robot1	n2:type	n1:Robot
 n1:Robot1	n3:label	'Ari'@en
 n1:Robot1	n1:hasEmotionalState	n1:Neutral
 n1:Robot1	n4:date	^2024-05-20T10:05:00Z
-n1:Robot2	n2:type	n1:Robot
-n1:Robot2	n3:label	'Auroa'@en
-n1:Robot2	n1:hasEmotionalState	n1:Neutral
-n1:Robot2	n4:date	^2024-05-20T10:05:00Z
 n1:Neutral	n2:type	n1:EmotionalState
 n1:Neutral	n3:label	'neutral'@en
 n1:Happy	n2:type	n1:EmotionalState
@@ -35,123 +28,69 @@ n1:Sad	n3:label	'sad'@en
 n1:Interaction1	n2:type	n5:Action
 n1:Interaction1	n1:performedBy	n1:Human1
 n1:Interaction1	n1:objectOfAction	n1:Robot1
-n1:Interaction1	n3:comment	'¿Cuál es el clima hoy?'@es
-n1:Interaction1	n4:date	^2024-07-17T10:01:00Z
+n1:Interaction1	n3:comment	'Despierta'@es
+n1:Interaction1	n4:date	^2024-07-16-20:46:22Z
 n1:Response1	n2:type	n5:Action
-n1:Response1	n1:performedBy	n1:Robot1
-n1:Response1	n1:objectOfAction	n1:Human1
-n1:Response1	n1:responseTo	n1:Interaction1
-n1:Response1	n3:comment	'El clima es soleado.'@es
-n1:Response1	n1:detectedEmotion	n1:Happy
-n1:Response1	n4:date	^2024-07-17T10:01:30Z
+n1:Response1	n1:performedBy	n1:Human1
+n1:Response1	n1:objectOfAction	n1:Robot1
+n1:Response1	n3:comment	'Que quieres hacer'@es
+n1:Response1	n1:detectedEmotion	n1:Neutral
+n1:Response1	n4:date	^2024-07-16-20:46:23Z
 n1:Interaction2	n2:type	n5:Action
-n1:Interaction2	n1:performedBy	n1:Human2
-n1:Interaction2	n1:objectOfAction	n1:Robot2
-n1:Interaction2	n3:comment	'¿Cuál es el estado de la batería?'@es
-n1:Interaction2	n4:date	^2024-07-17T10:05:00Z
+n1:Interaction2	n1:performedBy	n1:Human1
+n1:Interaction2	n1:objectOfAction	n1:Robot1
+n1:Interaction2	n3:comment	'Como te llamas'@es
+n1:Interaction2	n4:date	^2024-07-16-20:46:32Z
 n1:Response2	n2:type	n5:Action
-n1:Response2	n1:performedBy	n1:Robot2
-n1:Response2	n1:objectOfAction	n1:Human2
-n1:Response2	n1:responseTo	n1:Interaction2
-n1:Response2	n3:comment	'La batería está al 80%.'@es
+n1:Response2	n1:performedBy	n1:Human1
+n1:Response2	n1:objectOfAction	n1:Robot1
+n1:Response2	n3:comment	'Mi nombre es Ari asistente de Ibermatica'@es
 n1:Response2	n1:detectedEmotion	n1:Neutral
-n1:Response2	n4:date	^2024-07-17T10:05:30Z
+n1:Response2	n4:date	^2024-07-16-20:46:34Z
 n1:Interaction3	n2:type	n5:Action
 n1:Interaction3	n1:performedBy	n1:Human1
 n1:Interaction3	n1:objectOfAction	n1:Robot1
-n1:Interaction3	n3:comment	'¿Puedes encender la luz?'@es
-n1:Interaction3	n4:date	^2024-07-17T10:10:00Z
+n1:Interaction3	n3:comment	'Cuantos años tienes'@es
+n1:Interaction3	n4:date	^2024-07-16-20:46:35Z
 n1:Response3	n2:type	n5:Action
-n1:Response3	n1:performedBy	n1:Robot1
-n1:Response3	n1:objectOfAction	n1:Human1
-n1:Response3	n1:responseTo	n1:Interaction3
-n1:Response3	n3:comment	'No puedo realizar ese tipo de acciones.'@es
+n1:Response3	n1:performedBy	n1:Human1
+n1:Response3	n1:objectOfAction	n1:Robot1
+n1:Response3	n3:comment	'Tengo 3 años en términos humanos'@es
 n1:Response3	n1:detectedEmotion	n1:Frustrated
-n1:Response3	n4:date	^2024-07-17T10:10:30Z
+n1:Response3	n4:date	^2024-07-16-20:46:37Z
 n1:Interaction4	n2:type	n5:Action
 n1:Interaction4	n1:performedBy	n1:Human1
 n1:Interaction4	n1:objectOfAction	n1:Robot1
-n1:Interaction4	n3:comment	'¿Cuál es la fecha de hoy?'@es
-n1:Interaction4	n4:date	^2024-07-17T10:15:00Z
+n1:Interaction4	n3:comment	'Me puedes contar un chiste'@es
+n1:Interaction4	n4:date	^2024-07-16-20:46:38Z
 n1:Response4	n2:type	n5:Action
-n1:Response4	n1:performedBy	n1:Robot1
-n1:Response4	n1:objectOfAction	n1:Human1
-n1:Response4	n1:responseTo	n1:Interaction4
-n1:Response4	n3:comment	'Hoy es 17 de julio de 2024.'@es
-n1:Response4	n1:detectedEmotion	n1:Neutral
-n1:Response4	n4:date	^2024-07-17T10:15:30Z
+n1:Response4	n1:performedBy	n1:Human1
+n1:Response4	n1:objectOfAction	n1:Robot1
+n1:Response4	n3:comment	'Cual es la fruta más divertida la naranjajaja'@es
+n1:Response4	n1:detectedEmotion	n1:Happy
+n1:Response4	n4:date	^2024-07-16-20:46:41Z
 n1:Interaction5	n2:type	n5:Action
 n1:Interaction5	n1:performedBy	n1:Human1
-n1:Interaction5	n1:objectOfAction	n1:Robot2
-n1:Interaction5	n3:comment	'¿Puedes reproducir música?'@es
-n1:Interaction5	n4:date	^2024-07-17T10:20:00Z
+n1:Interaction5	n1:objectOfAction	n1:Robot1
+n1:Interaction5	n3:comment	'Y como estas'@es
+n1:Interaction5	n4:date	^2024-07-16-20:46:43Z
 n1:Response5	n2:type	n5:Action
-n1:Response5	n1:performedBy	n1:Robot2
-n1:Response5	n1:objectOfAction	n1:Human1
-n1:Response5	n1:responseTo	n1:Interaction5
-n1:Response5	n3:comment	'Me temo que ahora no puedo hacer lo que pides.'@es
+n1:Response5	n1:performedBy	n1:Human1
+n1:Response5	n1:objectOfAction	n1:Robot1
+n1:Response5	n3:comment	'Me siento genial nunca mejor'@es
 n1:Response5	n1:detectedEmotion	n1:Angry
-n1:Response5	n4:date	^2024-07-17T10:20:30Z
+n1:Response5	n4:date	^2024-07-16-20:46:44Z
 n1:Interaction6	n2:type	n5:Action
-n1:Interaction6	n1:performedBy	n1:Human2
+n1:Interaction6	n1:performedBy	n1:Human1
 n1:Interaction6	n1:objectOfAction	n1:Robot1
-n1:Interaction6	n3:comment	'¿Cuál es tu estado de carga?'@es
-n1:Interaction6	n4:date	^2024-07-17T10:25:00Z
-n1:Response6	n2:type	n5:Action
-n1:Response6	n1:performedBy	n1:Robot1
-n1:Response6	n1:objectOfAction	n1:Human2
-n1:Response6	n1:responseTo	n1:Interaction6
-n1:Response6	n3:comment	'Estoy al 90% de carga.'@es
-n1:Response6	n1:detectedEmotion	n1:Neutral
-n1:Response6	n4:date	^2024-07-17T10:25:30Z
-n1:Interaction7	n2:type	n5:Action
-n1:Interaction7	n1:performedBy	n1:Human1
-n1:Interaction7	n1:objectOfAction	n1:Robot1
-n1:Interaction7	n3:comment	'¿Puedes abrir la puerta?'@es
-n1:Interaction7	n4:date	^2024-07-17T10:30:00Z
-n1:Response7	n2:type	n5:Action
-n1:Response7	n1:performedBy	n1:Robot1
-n1:Response7	n1:objectOfAction	n1:Human1
-n1:Response7	n1:responseTo	n1:Interaction7
-n1:Response7	n3:comment	'No puedo pero si pudiera tampoco lo haría.'@es
-n1:Response7	n1:detectedEmotion	n1:Angry
-n1:Response7	n4:date	^2024-07-17T10:30:30Z
-n1:Interaction8	n2:type	n5:Action
-n1:Interaction8	n1:performedBy	n1:Human1
-n1:Interaction8	n1:objectOfAction	n1:Robot2
-n1:Interaction8	n3:comment	'¿Cuál es el estado del sistema?'@es
-n1:Interaction8	n4:date	^2024-07-17T10:35:00Z
-n1:Response8	n2:type	n5:Action
-n1:Response8	n1:performedBy	n1:Robot2
-n1:Response8	n1:objectOfAction	n1:Human1
-n1:Response8	n1:responseTo	n1:Interaction8
-n1:Response8	n3:comment	'El sistema está funcionando correctamente.'@es
-n1:Response8	n1:detectedEmotion	n1:Neutral
-n1:Response8	n4:date	^2024-07-17T10:35:30Z
-n1:Interaction9	n2:type	n5:Action
-n1:Interaction9	n1:performedBy	n1:Human1
-n1:Interaction9	n1:objectOfAction	n1:Robot1
-n1:Interaction9	n3:comment	'¿Cuál es la temperatura actual?'@es
-n1:Interaction9	n4:date	^2024-07-17T10:40:00Z
-n1:Response9	n2:type	n5:Action
-n1:Response9	n1:performedBy	n1:Robot1
-n1:Response9	n1:objectOfAction	n1:Human1
-n1:Response9	n1:responseTo	n1:Interaction9
-n1:Response9	n3:comment	'La temperatura actual es 22 grados Celsius.'@es
-n1:Response9	n1:detectedEmotion	n1:Happy
-n1:Response9	n4:date	^2024-07-17T10:40:30Z
-n1:Interaction10	n2:type	n5:Action
-n1:Interaction10	n1:performedBy	n1:Human2
-n1:Interaction10	n1:objectOfAction	n1:Robot1
-n1:Interaction10	n3:comment	'¿Puedes apagar la luz?'@es
-n1:Interaction10	n4:date	^2024-07-17T10:45:00Z
-n1:Response10	n2:type	n5:Action
-n1:Response10	n1:performedBy	n1:Robot1
-n1:Response10	n1:objectOfAction	n1:Human2
-n1:Response10	n1:responseTo	n1:Interaction10
-n1:Response10	n3:comment	'No.'@es
-n1:Response10	n1:detectedEmotion	n1:Sad
-n1:Response10	n4:date	^2024-07-17T10:45:30Z
+n1:Interaction6	n3:comment	'Duerme'@es
+n1:Interaction6	n4:date	^2024-07-16-20:46:45Z
+n1:response6	n2:type	n5:Action
+n1:response6	n1:performedBy	n1:Human1
+n1:response6	n1:objectOfAction	n1:Robot1
+n1:response6	n3:comment	'Llevo los secretos a la tumba'@es
+n1:response6	n1:detectedEmotion	n1:Sad
+n1:response6	n4:date	^2024-07-16-20:46:47Z
 n1	prefix_expansion	"http://kb.openrobots.org#"
 n2	prefix_expansion	"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 n3	prefix_expansion	"http://www.w3.org/2000/01/rdf-schema#"

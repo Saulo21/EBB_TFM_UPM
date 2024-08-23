@@ -1,11 +1,9 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
 import requests
-import streamlit.components.v1 as components
 import sqlite3
 from io import StringIO
+import streamlit.components.v1 as components
 from data_transformation import transformar_data
 
 # Configuración de la página
@@ -93,7 +91,7 @@ with c2:
 with st.sidebar:
     tab_title = '<p style="color:#00629b; font-size: 40px; margin-bottom: 0;">Control Panel</p>'
     st.markdown(tab_title, unsafe_allow_html=True)
-    option = st.radio("", ["Nuevo Archivo", "Archivos Guardados"], index=0)
+    option = st.radio("Seleccione una opción", ["Subir Nuevo Archivo", "Ver Archivos Guardados"], index=0)
 
 # Cargar el archivo CSS
 def load_css(file_name):
@@ -109,64 +107,76 @@ def cargar_ttl():
         return uploaded_file
     return None
 
-# Tab 1: Subir y procesar un nuevo archivo TTL
-if option == "Nuevo Archivo":
-    st.markdown("# Upload TTL file")
-    ttl_file = cargar_ttl()
+# Lógica de la opción seleccionada en el sidebar
+if option == "Subir Nuevo Archivo":
+    # Tabs para la opción de "Subir Nuevo Archivo"
+    tab1, tab2, tab3 = st.tabs(["Upload CSV", "ML Model", "Robot Statistics"])
 
-    if ttl_file is not None:
-        st.success("File successfully uploaded")
+    with tab1:
+        st.markdown("# Upload TTL file")
+        ttl_file = cargar_ttl()
 
-        # Enviar archivo TTL al servidor Flask para procesarlo
-        files = {'file': ttl_file.getvalue()}
-        response_csv = requests.post("http://localhost:5000/convert_ttl_to_csv", files=files)
-        response_html = requests.post("http://localhost:5000/convert_ttl_to_html", files=files)
+        if ttl_file is not None:
+            st.success("File successfully uploaded")
 
-        if response_csv.status_code == 200 and response_html.status_code == 200:
-            # Convertir la respuesta CSV en un DataFrame
-            csv_content = response_csv.text
-            data = pd.read_csv(StringIO(csv_content))
+            # Enviar archivo TTL al servidor Flask para procesarlo
+            files = {'file': ttl_file.getvalue()}
+            response_csv = requests.post("http://localhost:5000/convert_ttl_to_csv", files=files)
+            response_html = requests.post("http://localhost:5000/convert_ttl_to_html", files=files)
 
-            st.markdown("# CSV analysis")
-            num_rows = st.slider('Select number of rows to display', 1, 20, 10)
-            st.dataframe(data.head(num_rows))
+            if response_csv.status_code == 200 and response_html.status_code == 200:
+                # Convertir la respuesta CSV en un DataFrame
+                csv_content = response_csv.text
+                data = pd.read_csv(StringIO(csv_content))
 
-            st.markdown("# Knowledge Graph")
-            html_content = response_html.text
-            components.html(html_content, height=600)
+                st.markdown("# CSV analysis")
+                num_rows = st.slider('Select number of rows to display', 1, 20, 10)
+                st.dataframe(data.head(num_rows))
 
-            # Guardar archivos en la base de datos
-            save_files_to_db(ttl_file.name, ttl_file.getvalue(), csv_content.encode(), html_content.encode())
+                st.markdown("# Knowledge Graph")
+                html_content = response_html.text
+                components.html(html_content, height=600)
 
-            st.success("Archivos convertidos y guardados en la base de datos.")
-            st.download_button(label="Descargar CSV", data=csv_content, file_name="converted.csv")
-            st.download_button(label="Descargar HTML", data=html_content, file_name="converted.html")
+                # Guardar archivos en la base de datos
+                save_files_to_db(ttl_file.name, ttl_file.getvalue(), csv_content.encode(), html_content.encode())
+
+                st.success("Archivos convertidos y guardados en la base de datos.")
+                st.download_button(label="Descargar CSV", data=csv_content, file_name="converted.csv")
+                st.download_button(label="Descargar HTML", data=html_content, file_name="converted.html")
+            else:
+                st.error("Error processing the TTL file.")
+
+elif option == "Ver Archivos Guardados":
+    # Tabs para la opción de "Ver Archivos Guardados"
+    tab1, tab2, tab3 = st.tabs(["View Saved Files", "ML Model", "Robot Statistics"])
+
+    with tab1:
+        st.markdown("# Archivos Guardados")
+        files = load_files_from_db()
+        if files:
+            file_dict = {filename: file_id for file_id, filename in files}
+            selected_file = st.selectbox("Selecciona un archivo", list(file_dict.keys()))
+            if selected_file:
+                file_id = file_dict[selected_file]
+                ttl_content, csv_content, html_content = get_file_content(file_id)
+
+                st.markdown("# CSV analysis")
+                data = pd.read_csv(StringIO(csv_content.decode()))
+                num_rows = st.slider('Select number of rows to display', 1, 20, 10)
+                st.dataframe(data.head(num_rows))
+
+                st.markdown("# Knowledge Graph")
+                components.html(html_content.decode(), height=600)
+
+                st.download_button(label="Descargar CSV", data=csv_content, file_name="converted.csv")
+                st.download_button(label="Descargar HTML", data=html_content, file_name="converted.html")
         else:
-            st.error("Error processing the TTL file.")
+            st.write("No hay archivos guardados")
 
-# Tab 2: Ver archivos guardados anteriormente
-elif option == "Archivos Guardados":
-    st.markdown("# Archivos Guardados")
-    files = load_files_from_db()
-    if files:
-        file_dict = {filename: file_id for file_id, filename in files}
-        selected_file = st.selectbox("Selecciona un archivo", list(file_dict.keys()))
-        if selected_file:
-            file_id = file_dict[selected_file]
-            ttl_content, csv_content, html_content = get_file_content(file_id)
-
-            st.markdown("# CSV analysis")
-            data = pd.read_csv(StringIO(csv_content.decode()))
-            num_rows = st.slider('Select number of rows to display', 1, 20, 10)
-            st.dataframe(data.head(num_rows))
-
-            st.markdown("# Knowledge Graph")
-            components.html(html_content.decode(), height=600)
-
-            st.download_button(label="Descargar CSV", data=csv_content, file_name="converted.csv")
-            st.download_button(label="Descargar HTML", data=html_content, file_name="converted.html")
-    else:
-        st.write("No hay archivos guardados")
+# Tab 3: Placeholder para futuras funcionalidades
+with tab3:
+    st.markdown("# Estadísticas de Robots")
+    st.write("Contenido futuro para estadísticas de robots.")
 
 # Pie de página
 st.markdown(

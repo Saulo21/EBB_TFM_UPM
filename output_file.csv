@@ -4,20 +4,13 @@ MLmodel1,label,classification_of_offensive_language20
 MLmodel2,type,Model
 MLmodel2,label,bagging_experiment
 Human1,type,Human
-Human1,label,'George'@en
+Human1,label,'Saulo'@en
 Human1,recognizedBy,Robot1
 Human1,recognizedBy,Robot2
-Human2,type,Human
-Human2,label,'Alice'@en
-Human2,recognizedBy,Robot1
 Robot1,type,Robot
 Robot1,label,'Ari'@en
 Robot1,hasEmotionalState,Neutral
 Robot1,date,^2024-05-20T10:05:00Z
-Robot2,type,Robot
-Robot2,label,'Auroa'@en
-Robot2,hasEmotionalState,Neutral
-Robot2,date,^2024-05-20T10:05:00Z
 Neutral,type,EmotionalState
 Neutral,label,'neutral'@en
 Happy,type,EmotionalState
@@ -35,123 +28,69 @@ Sad,label,'sad'@en
 Interaction1,type,Action
 Interaction1,performedBy,Human1
 Interaction1,objectOfAction,Robot1
-Interaction1,comment,'¿Cuál es el clima hoy?'@es
-Interaction1,date,^2024-07-17T10:01:00Z
+Interaction1,comment,'Despierta'@es
+Interaction1,date,^2024-07-16-20:46:22Z
 Response1,type,Action
-Response1,performedBy,Robot1
-Response1,objectOfAction,Human1
-Response1,responseTo,Interaction1
-Response1,comment,'El clima es soleado.'@es
-Response1,detectedEmotion,Happy
-Response1,date,^2024-07-17T10:01:30Z
+Response1,performedBy,Human1
+Response1,objectOfAction,Robot1
+Response1,comment,'Que quieres hacer'@es
+Response1,detectedEmotion,Neutral
+Response1,date,^2024-07-16-20:46:23Z
 Interaction2,type,Action
-Interaction2,performedBy,Human2
-Interaction2,objectOfAction,Robot2
-Interaction2,comment,'¿Cuál es el estado de la batería?'@es
-Interaction2,date,^2024-07-17T10:05:00Z
+Interaction2,performedBy,Human1
+Interaction2,objectOfAction,Robot1
+Interaction2,comment,'Como te llamas'@es
+Interaction2,date,^2024-07-16-20:46:32Z
 Response2,type,Action
-Response2,performedBy,Robot2
-Response2,objectOfAction,Human2
-Response2,responseTo,Interaction2
-Response2,comment,'La batería está al 80%.'@es
+Response2,performedBy,Human1
+Response2,objectOfAction,Robot1
+Response2,comment,'Mi nombre es Ari asistente de Ibermatica'@es
 Response2,detectedEmotion,Neutral
-Response2,date,^2024-07-17T10:05:30Z
+Response2,date,^2024-07-16-20:46:34Z
 Interaction3,type,Action
 Interaction3,performedBy,Human1
 Interaction3,objectOfAction,Robot1
-Interaction3,comment,'¿Puedes encender la luz?'@es
-Interaction3,date,^2024-07-17T10:10:00Z
+Interaction3,comment,'Cuantos años tienes'@es
+Interaction3,date,^2024-07-16-20:46:35Z
 Response3,type,Action
-Response3,performedBy,Robot1
-Response3,objectOfAction,Human1
-Response3,responseTo,Interaction3
-Response3,comment,'No puedo realizar ese tipo de acciones.'@es
+Response3,performedBy,Human1
+Response3,objectOfAction,Robot1
+Response3,comment,'Tengo 3 años en términos humanos'@es
 Response3,detectedEmotion,Frustrated
-Response3,date,^2024-07-17T10:10:30Z
+Response3,date,^2024-07-16-20:46:37Z
 Interaction4,type,Action
 Interaction4,performedBy,Human1
 Interaction4,objectOfAction,Robot1
-Interaction4,comment,'¿Cuál es la fecha de hoy?'@es
-Interaction4,date,^2024-07-17T10:15:00Z
+Interaction4,comment,'Me puedes contar un chiste'@es
+Interaction4,date,^2024-07-16-20:46:38Z
 Response4,type,Action
-Response4,performedBy,Robot1
-Response4,objectOfAction,Human1
-Response4,responseTo,Interaction4
-Response4,comment,'Hoy es 17 de julio de 2024.'@es
-Response4,detectedEmotion,Neutral
-Response4,date,^2024-07-17T10:15:30Z
+Response4,performedBy,Human1
+Response4,objectOfAction,Robot1
+Response4,comment,'Cual es la fruta más divertida la naranjajaja'@es
+Response4,detectedEmotion,Happy
+Response4,date,^2024-07-16-20:46:41Z
 Interaction5,type,Action
 Interaction5,performedBy,Human1
-Interaction5,objectOfAction,Robot2
-Interaction5,comment,'¿Puedes reproducir música?'@es
-Interaction5,date,^2024-07-17T10:20:00Z
+Interaction5,objectOfAction,Robot1
+Interaction5,comment,'Y como estas'@es
+Interaction5,date,^2024-07-16-20:46:43Z
 Response5,type,Action
-Response5,performedBy,Robot2
-Response5,objectOfAction,Human1
-Response5,responseTo,Interaction5
-Response5,comment,'Me temo que ahora no puedo hacer lo que pides.'@es
+Response5,performedBy,Human1
+Response5,objectOfAction,Robot1
+Response5,comment,'Me siento genial nunca mejor'@es
 Response5,detectedEmotion,Angry
-Response5,date,^2024-07-17T10:20:30Z
+Response5,date,^2024-07-16-20:46:44Z
 Interaction6,type,Action
-Interaction6,performedBy,Human2
+Interaction6,performedBy,Human1
 Interaction6,objectOfAction,Robot1
-Interaction6,comment,'¿Cuál es tu estado de carga?'@es
-Interaction6,date,^2024-07-17T10:25:00Z
-Response6,type,Action
-Response6,performedBy,Robot1
-Response6,objectOfAction,Human2
-Response6,responseTo,Interaction6
-Response6,comment,'Estoy al 90% de carga.'@es
-Response6,detectedEmotion,Neutral
-Response6,date,^2024-07-17T10:25:30Z
-Interaction7,type,Action
-Interaction7,performedBy,Human1
-Interaction7,objectOfAction,Robot1
-Interaction7,comment,'¿Puedes abrir la puerta?'@es
-Interaction7,date,^2024-07-17T10:30:00Z
-Response7,type,Action
-Response7,performedBy,Robot1
-Response7,objectOfAction,Human1
-Response7,responseTo,Interaction7
-Response7,comment,'No puedo pero si pudiera tampoco lo haría.'@es
-Response7,detectedEmotion,Angry
-Response7,date,^2024-07-17T10:30:30Z
-Interaction8,type,Action
-Interaction8,performedBy,Human1
-Interaction8,objectOfAction,Robot2
-Interaction8,comment,'¿Cuál es el estado del sistema?'@es
-Interaction8,date,^2024-07-17T10:35:00Z
-Response8,type,Action
-Response8,performedBy,Robot2
-Response8,objectOfAction,Human1
-Response8,responseTo,Interaction8
-Response8,comment,'El sistema está funcionando correctamente.'@es
-Response8,detectedEmotion,Neutral
-Response8,date,^2024-07-17T10:35:30Z
-Interaction9,type,Action
-Interaction9,performedBy,Human1
-Interaction9,objectOfAction,Robot1
-Interaction9,comment,'¿Cuál es la temperatura actual?'@es
-Interaction9,date,^2024-07-17T10:40:00Z
-Response9,type,Action
-Response9,performedBy,Robot1
-Response9,objectOfAction,Human1
-Response9,responseTo,Interaction9
-Response9,comment,'La temperatura actual es 22 grados Celsius.'@es
-Response9,detectedEmotion,Happy
-Response9,date,^2024-07-17T10:40:30Z
-Interaction10,type,Action
-Interaction10,performedBy,Human2
-Interaction10,objectOfAction,Robot1
-Interaction10,comment,'¿Puedes apagar la luz?'@es
-Interaction10,date,^2024-07-17T10:45:00Z
-Response10,type,Action
-Response10,performedBy,Robot1
-Response10,objectOfAction,Human2
-Response10,responseTo,Interaction10
-Response10,comment,'No.'@es
-Response10,detectedEmotion,Sad
-Response10,date,^2024-07-17T10:45:30Z
+Interaction6,comment,'Duerme'@es
+Interaction6,date,^2024-07-16-20:46:45Z
+response6,type,Action
+response6,performedBy,Human1
+response6,objectOfAction,Robot1
+response6,comment,'Llevo los secretos a la tumba'@es
+response6,detectedEmotion,Sad
+response6,date,^2024-07-16-20:46:47Z
 n1,prefix_expansion,//kb.openrobots.org#
 n2,prefix_expansion,//www.w3.org/1999/02/22-rdf-syntax-ns#
 n3,prefix_expansion,//www.w3.org/2000/01/rdf-schema#
