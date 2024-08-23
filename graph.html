@@ -1,0 +1,1231 @@
+<head>
+            <style> body { margin: 0; } </style>
+            <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-scale@4"></script>
+            <script src="https://unpkg.com/force-graph"></script>
+            <!--<script src="../../dist/force-graph.js"></script>-->
+            </head>
+            <body>
+            <div id="graph"></div>
+            <script>        
+               const j = {
+    "links": [
+        {
+            "source": "n1:MLmodel1",
+            "target": "n1:Model",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:MLmodel1",
+            "target": "\"classification_of_offensive_language20\"",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:MLmodel2",
+            "target": "n1:Model",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:MLmodel2",
+            "target": "\"bagging_experiment\"",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Human1",
+            "target": "n1:Human",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Human1",
+            "target": "'Saulo'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Human1",
+            "target": "n1:Robot1",
+            "label": "n1:recognizedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Human1",
+            "target": "n1:Robot2",
+            "label": "n1:recognizedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Robot1",
+            "target": "n1:Robot",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Robot1",
+            "target": "'Ari'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Robot1",
+            "target": "n1:Neutral",
+            "label": "n1:hasEmotionalState",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Robot1",
+            "target": "^2024-05-20T10:05:00Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Neutral",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Neutral",
+            "target": "'neutral'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Happy",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Happy",
+            "target": "'happy'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Appreciated",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Appreciated",
+            "target": "'appreciated'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Useful",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Useful",
+            "target": "'useful'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Angry",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Angry",
+            "target": "'angry'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Frustrated",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Frustrated",
+            "target": "'frustrated'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Sad",
+            "target": "n1:EmotionalState",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Sad",
+            "target": "'sad'@en",
+            "label": "n3:label",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction1",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction1",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction1",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction1",
+            "target": "'Despierta'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction1",
+            "target": "^2024-07-16-20:46:22Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "'Que quieres hacer'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "n1:Neutral",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response1",
+            "target": "^2024-07-16-20:46:23Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction2",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction2",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction2",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction2",
+            "target": "'Como te llamas'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction2",
+            "target": "^2024-07-16-20:46:32Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "'Mi nombre es Ari asistente de Ibermatica'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "n1:Neutral",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response2",
+            "target": "^2024-07-16-20:46:34Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction3",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction3",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction3",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction3",
+            "target": "'Cuantos a\u00f1os tienes'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction3",
+            "target": "^2024-07-16-20:46:35Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "'Tengo 3 a\u00f1os en t\u00e9rminos humanos'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "n1:Frustrated",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response3",
+            "target": "^2024-07-16-20:46:37Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction4",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction4",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction4",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction4",
+            "target": "'Me puedes contar un chiste'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction4",
+            "target": "^2024-07-16-20:46:38Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "'Cual es la fruta m\u00e1s divertida la naranjajaja'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "n1:Happy",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response4",
+            "target": "^2024-07-16-20:46:41Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction5",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction5",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction5",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction5",
+            "target": "'Y como estas'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction5",
+            "target": "^2024-07-16-20:46:43Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "'Me siento genial nunca mejor'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "n1:Angry",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Response5",
+            "target": "^2024-07-16-20:46:44Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction6",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction6",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction6",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction6",
+            "target": "'Duerme'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:Interaction6",
+            "target": "^2024-07-16-20:46:45Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "n5:Action",
+            "label": "n2:type",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "n1:Human1",
+            "label": "n1:performedBy",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "n1:Robot1",
+            "label": "n1:objectOfAction",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "'Llevo los secretos a la tumba'@es",
+            "label": "n3:comment",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "n1:Sad",
+            "label": "n1:detectedEmotion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1:response6",
+            "target": "^2024-07-16-20:46:47Z",
+            "label": "n4:date",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n1",
+            "target": "\"http://kb.openrobots.org#\"",
+            "label": "prefix_expansion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n2",
+            "target": "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"",
+            "label": "prefix_expansion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n3",
+            "target": "\"http://www.w3.org/2000/01/rdf-schema#\"",
+            "label": "prefix_expansion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n4",
+            "target": "\"http://purl.org/dc/elements/1.1/\"",
+            "label": "prefix_expansion",
+            "width": 1.0,
+            "color": "#000000"
+        },
+        {
+            "source": "n5",
+            "target": "\"http://sw.opencyc.org/concept/\"",
+            "label": "prefix_expansion",
+            "width": 1.0,
+            "color": "#000000"
+        }
+    ],
+    "nodes": [
+        {
+            "id": "n1:Interaction6",
+            "label": "n1:Interaction6",
+            "tooltip": "n1:Interaction6",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Saulo'@en",
+            "label": "'Saulo'",
+            "tooltip": "'Saulo'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Robot1",
+            "label": "n1:Robot1",
+            "tooltip": "n1:Robot1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'neutral'@en",
+            "label": "'neutral'",
+            "tooltip": "'neutral'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Interaction2",
+            "label": "n1:Interaction2",
+            "tooltip": "n1:Interaction2",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Mi nombre es Ari asistente de Ibermatica'@es",
+            "label": "'Mi nombre es Ari asistente de Ibermatica'",
+            "tooltip": "'Mi nombre es Ari asistente de Ibermatica'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:35Z",
+            "label": "^2024-07-16-20:46:35Z",
+            "tooltip": "^2024-07-16-20:46:35Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Tengo 3 a\u00f1os en t\u00e9rminos humanos'@es",
+            "label": "'Tengo 3 a\u00f1os en t\u00e9rminos humanos'",
+            "tooltip": "'Tengo 3 a\u00f1os en t\u00e9rminos humanos'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:37Z",
+            "label": "^2024-07-16-20:46:37Z",
+            "tooltip": "^2024-07-16-20:46:37Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n5:Action",
+            "label": "n5:Action",
+            "tooltip": "n5:Action",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:MLmodel2",
+            "label": "n1:MLmodel2",
+            "tooltip": "n1:MLmodel2",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Cual es la fruta m\u00e1s divertida la naranjajaja'@es",
+            "label": "'Cual es la fruta m\u00e1s divertida la naranjajaja'",
+            "tooltip": "'Cual es la fruta m\u00e1s divertida la naranjajaja'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1",
+            "label": "n1",
+            "tooltip": "n1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Response5",
+            "label": "n1:Response5",
+            "tooltip": "n1:Response5",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Angry",
+            "label": "n1:Angry",
+            "tooltip": "n1:Angry",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:47Z",
+            "label": "^2024-07-16-20:46:47Z",
+            "tooltip": "^2024-07-16-20:46:47Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n4",
+            "label": "n4",
+            "tooltip": "n4",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:EmotionalState",
+            "label": "n1:EmotionalState",
+            "tooltip": "n1:EmotionalState",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Interaction1",
+            "label": "n1:Interaction1",
+            "tooltip": "n1:Interaction1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n3",
+            "label": "n3",
+            "tooltip": "n3",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"http://purl.org/dc/elements/1.1/\"",
+            "label": "\"http://purl.org/dc/elements/1.1/\"",
+            "tooltip": "\"http://purl.org/dc/elements/1.1/\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'happy'@en",
+            "label": "'happy'",
+            "tooltip": "'happy'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-05-20T10:05:00Z",
+            "label": "^2024-05-20T10:05:00Z",
+            "tooltip": "^2024-05-20T10:05:00Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'angry'@en",
+            "label": "'angry'",
+            "tooltip": "'angry'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Sad",
+            "label": "n1:Sad",
+            "tooltip": "n1:Sad",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Happy",
+            "label": "n1:Happy",
+            "tooltip": "n1:Happy",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"bagging_experiment\"",
+            "label": "\"bagging_experiment\"",
+            "tooltip": "\"bagging_experiment\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Cuantos a\u00f1os tienes'@es",
+            "label": "'Cuantos a\u00f1os tienes'",
+            "tooltip": "'Cuantos a\u00f1os tienes'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Robot2",
+            "label": "n1:Robot2",
+            "tooltip": "n1:Robot2",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:43Z",
+            "label": "^2024-07-16-20:46:43Z",
+            "tooltip": "^2024-07-16-20:46:43Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:MLmodel1",
+            "label": "n1:MLmodel1",
+            "tooltip": "n1:MLmodel1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:38Z",
+            "label": "^2024-07-16-20:46:38Z",
+            "tooltip": "^2024-07-16-20:46:38Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'useful'@en",
+            "label": "'useful'",
+            "tooltip": "'useful'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Model",
+            "label": "n1:Model",
+            "tooltip": "n1:Model",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:41Z",
+            "label": "^2024-07-16-20:46:41Z",
+            "tooltip": "^2024-07-16-20:46:41Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:22Z",
+            "label": "^2024-07-16-20:46:22Z",
+            "tooltip": "^2024-07-16-20:46:22Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Y como estas'@es",
+            "label": "'Y como estas'",
+            "tooltip": "'Y como estas'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:45Z",
+            "label": "^2024-07-16-20:46:45Z",
+            "tooltip": "^2024-07-16-20:46:45Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"http://kb.openrobots.org#\"",
+            "label": "\"http://kb.openrobots.org#\"",
+            "tooltip": "\"http://kb.openrobots.org#\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Frustrated",
+            "label": "n1:Frustrated",
+            "tooltip": "n1:Frustrated",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Useful",
+            "label": "n1:Useful",
+            "tooltip": "n1:Useful",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Neutral",
+            "label": "n1:Neutral",
+            "tooltip": "n1:Neutral",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'sad'@en",
+            "label": "'sad'",
+            "tooltip": "'sad'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:23Z",
+            "label": "^2024-07-16-20:46:23Z",
+            "tooltip": "^2024-07-16-20:46:23Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"http://www.w3.org/2000/01/rdf-schema#\"",
+            "label": "\"http://www.w3.org/2000/01/rdf-schema#\"",
+            "tooltip": "\"http://www.w3.org/2000/01/rdf-schema#\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:44Z",
+            "label": "^2024-07-16-20:46:44Z",
+            "tooltip": "^2024-07-16-20:46:44Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"classification_of_offensive_language20\"",
+            "label": "\"classification_of_offensive_language20\"",
+            "tooltip": "\"classification_of_offensive_language20\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:32Z",
+            "label": "^2024-07-16-20:46:32Z",
+            "tooltip": "^2024-07-16-20:46:32Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Me siento genial nunca mejor'@es",
+            "label": "'Me siento genial nunca mejor'",
+            "tooltip": "'Me siento genial nunca mejor'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Response3",
+            "label": "n1:Response3",
+            "tooltip": "n1:Response3",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"http://sw.opencyc.org/concept/\"",
+            "label": "\"http://sw.opencyc.org/concept/\"",
+            "tooltip": "\"http://sw.opencyc.org/concept/\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"",
+            "label": "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"",
+            "tooltip": "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Response4",
+            "label": "n1:Response4",
+            "tooltip": "n1:Response4",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Response2",
+            "label": "n1:Response2",
+            "tooltip": "n1:Response2",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Llevo los secretos a la tumba'@es",
+            "label": "'Llevo los secretos a la tumba'",
+            "tooltip": "'Llevo los secretos a la tumba'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Robot",
+            "label": "n1:Robot",
+            "tooltip": "n1:Robot",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Human",
+            "label": "n1:Human",
+            "tooltip": "n1:Human",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'appreciated'@en",
+            "label": "'appreciated'",
+            "tooltip": "'appreciated'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Response1",
+            "label": "n1:Response1",
+            "tooltip": "n1:Response1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Interaction4",
+            "label": "n1:Interaction4",
+            "tooltip": "n1:Interaction4",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n5",
+            "label": "n5",
+            "tooltip": "n5",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n2",
+            "label": "n2",
+            "tooltip": "n2",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:response6",
+            "label": "n1:response6",
+            "tooltip": "n1:response6",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Despierta'@es",
+            "label": "'Despierta'",
+            "tooltip": "'Despierta'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Que quieres hacer'@es",
+            "label": "'Que quieres hacer'",
+            "tooltip": "'Que quieres hacer'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Como te llamas'@es",
+            "label": "'Como te llamas'",
+            "tooltip": "'Como te llamas'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Interaction5",
+            "label": "n1:Interaction5",
+            "tooltip": "n1:Interaction5",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Duerme'@es",
+            "label": "'Duerme'",
+            "tooltip": "'Duerme'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Ari'@en",
+            "label": "'Ari'",
+            "tooltip": "'Ari'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'frustrated'@en",
+            "label": "'frustrated'",
+            "tooltip": "'frustrated'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Appreciated",
+            "label": "n1:Appreciated",
+            "tooltip": "n1:Appreciated",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Human1",
+            "label": "n1:Human1",
+            "tooltip": "n1:Human1",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "n1:Interaction3",
+            "label": "n1:Interaction3",
+            "tooltip": "n1:Interaction3",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "'Me puedes contar un chiste'@es",
+            "label": "'Me puedes contar un chiste'",
+            "tooltip": "'Me puedes contar un chiste'",
+            "size": 2.0,
+            "orig_size": 2.0
+        },
+        {
+            "id": "^2024-07-16-20:46:34Z",
+            "label": "^2024-07-16-20:46:34Z",
+            "tooltip": "^2024-07-16-20:46:34Z",
+            "size": 2.0,
+            "orig_size": 2.0
+        }
+    ]
+}
+              const Graph = ForceGraph()
+              (document.getElementById('graph'))
+                .graphData(j)
+                .nodeId('id')
+                .nodeLabel('tooltip')
+                .nodeVal('size')
+                        .nodeAutoColorBy('group')
+                        .linkWidth((link) => link.width)        .linkColor((link) => link.color)  </script>
+            </body>

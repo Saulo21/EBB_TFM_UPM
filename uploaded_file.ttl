@@ -1,0 +1,133 @@
+@prefix : <http://kb.openrobots.org#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix oro: <http://kb.openrobots.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix concept: <http://sw.opencyc.org/concept/> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@base <http://kb.openrobots.org#> .
+
+### Modelo de aprendizaje automático
+:MLmodel1 rdf:type oro:Model ;
+          rdfs:label  "classification_of_offensive_language20".
+
+### Modelo de aprendizaje automático
+:MLmodel2 rdf:type oro:Model ;
+          rdfs:label  "bagging_experiment".
+
+### Definición de Humanos
+:Human1 rdf:type oro:Human ;
+        rdfs:label "Saulo"@en ;
+        oro:recognizedBy :Robot1, :Robot2 .
+
+### Definición de Robots
+:Robot1 rdf:type oro:Robot ;
+        rdfs:label "Ari"@en ;
+        oro:hasEmotionalState :Neutral ;
+        dc:date "2024-05-20T10:05:00Z"^^xsd:dateTime .
+
+### Definición de Estados Emocionales
+:Neutral rdf:type oro:EmotionalState ;
+         rdfs:label "neutral"@en .
+
+:Happy rdf:type oro:EmotionalState ;
+       rdfs:label "happy"@en .
+
+:Appreciated rdf:type oro:EmotionalState ;
+             rdfs:label "appreciated"@en .
+
+:Useful rdf:type oro:EmotionalState ;
+        rdfs:label "useful"@en .
+
+:Angry rdf:type oro:EmotionalState ;
+       rdfs:label "angry"@en .
+
+:Frustrated rdf:type oro:EmotionalState ;
+            rdfs:label "frustrated"@en .
+
+:Sad rdf:type oro:EmotionalState ;
+     rdfs:label "sad"@en .
+
+:Interaction1 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Despierta"@es ;
+              dc:date "2024-07-16-20:46:22Z"^^xsd:dateTime .
+
+:Response1 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Que quieres hacer"@es ;
+              oro:detectedEmotion :Neutral ;
+              dc:date "2024-07-16-20:46:23Z"^^xsd:dateTime .
+
+:Interaction2 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Como te llamas"@es ;
+              dc:date "2024-07-16-20:46:32Z"^^xsd:dateTime .
+
+:Response2 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Mi nombre es Ari asistente de Ibermatica"@es ;
+              oro:detectedEmotion :Neutral ;
+              dc:date "2024-07-16-20:46:34Z"^^xsd:dateTime .
+
+:Interaction3 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Cuantos años tienes"@es ;
+              dc:date "2024-07-16-20:46:35Z"^^xsd:dateTime .
+
+:Response3 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Tengo 3 años en términos humanos"@es ;
+              oro:detectedEmotion :Frustrated ;
+              dc:date "2024-07-16-20:46:37Z"^^xsd:dateTime .
+
+:Interaction4 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Me puedes contar un chiste"@es ;
+              dc:date "2024-07-16-20:46:38Z"^^xsd:dateTime .
+
+:Response4 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Cual es la fruta más divertida la naranjajaja"@es ;
+              oro:detectedEmotion :Happy ;
+              dc:date "2024-07-16-20:46:41Z"^^xsd:dateTime .
+
+:Interaction5 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Y como estas"@es ;
+              dc:date "2024-07-16-20:46:43Z"^^xsd:dateTime .
+
+:Response5 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Me siento genial nunca mejor"@es ;
+              oro:detectedEmotion :Angry ;
+              dc:date "2024-07-16-20:46:44Z"^^xsd:dateTime .
+
+:Interaction6 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Duerme"@es ;
+              dc:date "2024-07-16-20:46:45Z"^^xsd:dateTime .
+
+:response6 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "Llevo los secretos a la tumba"@es ;
+              oro:detectedEmotion :Sad ;
+              dc:date "2024-07-16-20:46:47Z"^^xsd:dateTime .
+

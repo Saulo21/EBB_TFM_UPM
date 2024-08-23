@@ -1,0 +1,98 @@
+node1,label,node2
+MLmodel1,type,Model
+MLmodel1,label,classification_of_offensive_language20
+MLmodel2,type,Model
+MLmodel2,label,bagging_experiment
+Human1,type,Human
+Human1,label,'Saulo'@en
+Human1,recognizedBy,Robot1
+Human1,recognizedBy,Robot2
+Robot1,type,Robot
+Robot1,label,'Ari'@en
+Robot1,hasEmotionalState,Neutral
+Robot1,date,^2024-05-20T10:05:00Z
+Neutral,type,EmotionalState
+Neutral,label,'neutral'@en
+Happy,type,EmotionalState
+Happy,label,'happy'@en
+Appreciated,type,EmotionalState
+Appreciated,label,'appreciated'@en
+Useful,type,EmotionalState
+Useful,label,'useful'@en
+Angry,type,EmotionalState
+Angry,label,'angry'@en
+Frustrated,type,EmotionalState
+Frustrated,label,'frustrated'@en
+Sad,type,EmotionalState
+Sad,label,'sad'@en
+Interaction1,type,Action
+Interaction1,performedBy,Human1
+Interaction1,objectOfAction,Robot1
+Interaction1,comment,'Despierta'@es
+Interaction1,date,^2024-07-16-20:46:22Z
+Response1,type,Action
+Response1,performedBy,Human1
+Response1,objectOfAction,Robot1
+Response1,comment,'Que quieres hacer'@es
+Response1,detectedEmotion,Neutral
+Response1,date,^2024-07-16-20:46:23Z
+Interaction2,type,Action
+Interaction2,performedBy,Human1
+Interaction2,objectOfAction,Robot1
+Interaction2,comment,'Como te llamas'@es
+Interaction2,date,^2024-07-16-20:46:32Z
+Response2,type,Action
+Response2,performedBy,Human1
+Response2,objectOfAction,Robot1
+Response2,comment,'Mi nombre es Ari asistente de Ibermatica'@es
+Response2,detectedEmotion,Neutral
+Response2,date,^2024-07-16-20:46:34Z
+Interaction3,type,Action
+Interaction3,performedBy,Human1
+Interaction3,objectOfAction,Robot1
+Interaction3,comment,'Cuantos años tienes'@es
+Interaction3,date,^2024-07-16-20:46:35Z
+Response3,type,Action
+Response3,performedBy,Human1
+Response3,objectOfAction,Robot1
+Response3,comment,'Tengo 3 años en términos humanos'@es
+Response3,detectedEmotion,Frustrated
+Response3,date,^2024-07-16-20:46:37Z
+Interaction4,type,Action
+Interaction4,performedBy,Human1
+Interaction4,objectOfAction,Robot1
+Interaction4,comment,'Me puedes contar un chiste'@es
+Interaction4,date,^2024-07-16-20:46:38Z
+Response4,type,Action
+Response4,performedBy,Human1
+Response4,objectOfAction,Robot1
+Response4,comment,'Cual es la fruta más divertida la naranjajaja'@es
+Response4,detectedEmotion,Happy
+Response4,date,^2024-07-16-20:46:41Z
+Interaction5,type,Action
+Interaction5,performedBy,Human1
+Interaction5,objectOfAction,Robot1
+Interaction5,comment,'Y como estas'@es
+Interaction5,date,^2024-07-16-20:46:43Z
+Response5,type,Action
+Response5,performedBy,Human1
+Response5,objectOfAction,Robot1
+Response5,comment,'Me siento genial nunca mejor'@es
+Response5,detectedEmotion,Angry
+Response5,date,^2024-07-16-20:46:44Z
+Interaction6,type,Action
+Interaction6,performedBy,Human1
+Interaction6,objectOfAction,Robot1
+Interaction6,comment,'Duerme'@es
+Interaction6,date,^2024-07-16-20:46:45Z
+response6,type,Action
+response6,performedBy,Human1
+response6,objectOfAction,Robot1
+response6,comment,'Llevo los secretos a la tumba'@es
+response6,detectedEmotion,Sad
+response6,date,^2024-07-16-20:46:47Z
+n1,prefix_expansion,//kb.openrobots.org#
+n2,prefix_expansion,//www.w3.org/1999/02/22-rdf-syntax-ns#
+n3,prefix_expansion,//www.w3.org/2000/01/rdf-schema#
+n4,prefix_expansion,//purl.org/dc/elements/1.1/
+n5,prefix_expansion,//sw.opencyc.org/concept/

@@ -1,0 +1,92 @@
+<http://kb.openrobots.org#MLmodel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#Model> .
+<http://kb.openrobots.org#MLmodel1> <http://www.w3.org/2000/01/rdf-schema#label> "classification_of_offensive_language20" .
+<http://kb.openrobots.org#MLmodel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#Model> .
+<http://kb.openrobots.org#MLmodel2> <http://www.w3.org/2000/01/rdf-schema#label> "bagging_experiment" .
+<http://kb.openrobots.org#Human1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#Human> .
+<http://kb.openrobots.org#Human1> <http://www.w3.org/2000/01/rdf-schema#label> "Saulo"@en .
+<http://kb.openrobots.org#Human1> <http://kb.openrobots.org#recognizedBy> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Human1> <http://kb.openrobots.org#recognizedBy> <http://kb.openrobots.org#Robot2> .
+<http://kb.openrobots.org#Robot1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#Robot> .
+<http://kb.openrobots.org#Robot1> <http://www.w3.org/2000/01/rdf-schema#label> "Ari"@en .
+<http://kb.openrobots.org#Robot1> <http://kb.openrobots.org#hasEmotionalState> <http://kb.openrobots.org#Neutral> .
+<http://kb.openrobots.org#Robot1> <http://purl.org/dc/elements/1.1/date> "2024-05-20T10:05:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Neutral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Neutral> <http://www.w3.org/2000/01/rdf-schema#label> "neutral"@en .
+<http://kb.openrobots.org#Happy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Happy> <http://www.w3.org/2000/01/rdf-schema#label> "happy"@en .
+<http://kb.openrobots.org#Appreciated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Appreciated> <http://www.w3.org/2000/01/rdf-schema#label> "appreciated"@en .
+<http://kb.openrobots.org#Useful> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Useful> <http://www.w3.org/2000/01/rdf-schema#label> "useful"@en .
+<http://kb.openrobots.org#Angry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Angry> <http://www.w3.org/2000/01/rdf-schema#label> "angry"@en .
+<http://kb.openrobots.org#Frustrated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Frustrated> <http://www.w3.org/2000/01/rdf-schema#label> "frustrated"@en .
+<http://kb.openrobots.org#Sad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://kb.openrobots.org#EmotionalState> .
+<http://kb.openrobots.org#Sad> <http://www.w3.org/2000/01/rdf-schema#label> "sad"@en .
+<http://kb.openrobots.org#Interaction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction1> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction1> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction1> <http://www.w3.org/2000/01/rdf-schema#comment> "Despierta"@es .
+<http://kb.openrobots.org#Interaction1> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:22Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Response1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Response1> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Response1> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Response1> <http://www.w3.org/2000/01/rdf-schema#comment> "Que quieres hacer"@es .
+<http://kb.openrobots.org#Response1> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Neutral> .
+<http://kb.openrobots.org#Response1> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:23Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Interaction2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction2> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction2> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction2> <http://www.w3.org/2000/01/rdf-schema#comment> "Como te llamas"@es .
+<http://kb.openrobots.org#Interaction2> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:32Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Response2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Response2> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Response2> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Response2> <http://www.w3.org/2000/01/rdf-schema#comment> "Mi nombre es Ari asistente de Ibermatica"@es .
+<http://kb.openrobots.org#Response2> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Neutral> .
+<http://kb.openrobots.org#Response2> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:34Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Interaction3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction3> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction3> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction3> <http://www.w3.org/2000/01/rdf-schema#comment> "Cuantos años tienes"@es .
+<http://kb.openrobots.org#Interaction3> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:35Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Response3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Response3> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Response3> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Response3> <http://www.w3.org/2000/01/rdf-schema#comment> "Tengo 3 años en términos humanos"@es .
+<http://kb.openrobots.org#Response3> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Frustrated> .
+<http://kb.openrobots.org#Response3> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:37Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Interaction4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction4> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction4> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction4> <http://www.w3.org/2000/01/rdf-schema#comment> "Me puedes contar un chiste"@es .
+<http://kb.openrobots.org#Interaction4> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:38Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Response4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Response4> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Response4> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Response4> <http://www.w3.org/2000/01/rdf-schema#comment> "Cual es la fruta más divertida la naranjajaja"@es .
+<http://kb.openrobots.org#Response4> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Happy> .
+<http://kb.openrobots.org#Response4> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:41Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Interaction5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction5> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction5> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction5> <http://www.w3.org/2000/01/rdf-schema#comment> "Y como estas"@es .
+<http://kb.openrobots.org#Interaction5> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Response5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Response5> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Response5> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Response5> <http://www.w3.org/2000/01/rdf-schema#comment> "Me siento genial nunca mejor"@es .
+<http://kb.openrobots.org#Response5> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Angry> .
+<http://kb.openrobots.org#Response5> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#Interaction6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#Interaction6> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#Interaction6> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#Interaction6> <http://www.w3.org/2000/01/rdf-schema#comment> "Duerme"@es .
+<http://kb.openrobots.org#Interaction6> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:45Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://kb.openrobots.org#response6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sw.opencyc.org/concept/Action> .
+<http://kb.openrobots.org#response6> <http://kb.openrobots.org#performedBy> <http://kb.openrobots.org#Human1> .
+<http://kb.openrobots.org#response6> <http://kb.openrobots.org#objectOfAction> <http://kb.openrobots.org#Robot1> .
+<http://kb.openrobots.org#response6> <http://www.w3.org/2000/01/rdf-schema#comment> "Llevo los secretos a la tumba"@es .
+<http://kb.openrobots.org#response6> <http://kb.openrobots.org#detectedEmotion> <http://kb.openrobots.org#Sad> .
+<http://kb.openrobots.org#response6> <http://purl.org/dc/elements/1.1/date> "2024-07-16-20:46:47Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
