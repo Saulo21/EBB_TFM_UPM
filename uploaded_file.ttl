@@ -22,12 +22,21 @@
 
 ### Definición de Humanos
 :Human1 rdf:type oro:Human ;
-        rdfs:label "Saulo"@en ;
+        rdfs:label "George"@en ;
         oro:recognizedBy :Robot1, :Robot2 .
+
+:Human2 rdf:type oro:Human ;
+        rdfs:label "Alice"@en ;
+        oro:recognizedBy :Robot1 .
 
 ### Definición de Robots
 :Robot1 rdf:type oro:Robot ;
         rdfs:label "Ari"@en ;
+        oro:hasEmotionalState :Neutral ;
+        dc:date "2024-05-20T10:05:00Z"^^xsd:dateTime .
+
+:Robot2 rdf:type oro:Robot ;
+        rdfs:label "Auroa"@en ;
         oro:hasEmotionalState :Neutral ;
         dc:date "2024-05-20T10:05:00Z"^^xsd:dateTime .
 
@@ -53,81 +62,152 @@
 :Sad rdf:type oro:EmotionalState ;
      rdfs:label "sad"@en .
 
+### Interacción 1: Pregunta de Humano1 a Robot1 y respuesta
 :Interaction1 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
               oro:objectOfAction :Robot1 ;
-              rdfs:comment "Despierta"@es ;
-              dc:date "2024-07-16-20:46:22Z"^^xsd:dateTime .
+              rdfs:comment "¿Cuál es el clima hoy?"@es ;
+              dc:date "2024-07-17T10:01:00Z"^^xsd:dateTime .
 
 :Response1 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Que quieres hacer"@es ;
-              oro:detectedEmotion :Neutral ;
-              dc:date "2024-07-16-20:46:23Z"^^xsd:dateTime .
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction1 ;
+           rdfs:comment "El clima es soleado."@es ;
+           oro:detectedEmotion :Happy ;
+           dc:date "2024-07-17T10:01:30Z"^^xsd:dateTime .
 
+### Interacción 2: Pregunta de Humano2 a Robot2 y respuesta
 :Interaction2 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Como te llamas"@es ;
-              dc:date "2024-07-16-20:46:32Z"^^xsd:dateTime .
+              oro:performedBy :Human2 ;
+              oro:objectOfAction :Robot2 ;
+              rdfs:comment "¿Cuál es el estado de la batería?"@es ;
+              dc:date "2024-07-17T10:05:00Z"^^xsd:dateTime .
 
 :Response2 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Mi nombre es Ari asistente de Ibermatica"@es ;
-              oro:detectedEmotion :Neutral ;
-              dc:date "2024-07-16-20:46:34Z"^^xsd:dateTime .
+           oro:performedBy :Robot2 ;
+           oro:objectOfAction :Human2 ;
+           oro:responseTo :Interaction2 ;
+           rdfs:comment "La batería está al 80%."@es ;
+           oro:detectedEmotion :Neutral ;
+           dc:date "2024-07-17T10:05:30Z"^^xsd:dateTime .
 
+### Interacción 3: Pregunta de Humano1 a Robot1 y respuesta
 :Interaction3 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
               oro:objectOfAction :Robot1 ;
-              rdfs:comment "Cuantos años tienes"@es ;
-              dc:date "2024-07-16-20:46:35Z"^^xsd:dateTime .
+              rdfs:comment "¿Puedes encender la luz?"@es ;
+              dc:date "2024-07-17T10:10:00Z"^^xsd:dateTime .
 
 :Response3 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Tengo 3 años en términos humanos"@es ;
-              oro:detectedEmotion :Frustrated ;
-              dc:date "2024-07-16-20:46:37Z"^^xsd:dateTime .
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction3 ;
+           rdfs:comment "No puedo realizar ese tipo de acciones."@es ;
+           oro:detectedEmotion :Frustrated ;
+           dc:date "2024-07-17T10:10:30Z"^^xsd:dateTime .
 
+### Interacción 4: Pregunta de Humano1 a Robot1 y respuesta
 :Interaction4 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
               oro:objectOfAction :Robot1 ;
-              rdfs:comment "Me puedes contar un chiste"@es ;
-              dc:date "2024-07-16-20:46:38Z"^^xsd:dateTime .
+              rdfs:comment "¿Cuál es la fecha de hoy?"@es ;
+              dc:date "2024-07-17T10:15:00Z"^^xsd:dateTime .
 
 :Response4 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Cual es la fruta más divertida la naranjajaja"@es ;
-              oro:detectedEmotion :Happy ;
-              dc:date "2024-07-16-20:46:41Z"^^xsd:dateTime .
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction4 ;
+           rdfs:comment "Hoy es 17 de julio de 2024."@es ;
+           oro:detectedEmotion :Neutral ;
+           dc:date "2024-07-17T10:15:30Z"^^xsd:dateTime .
 
+### Interacción 5: Pregunta de Humano1 a Robot2 y respuesta
 :Interaction5 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Y como estas"@es ;
-              dc:date "2024-07-16-20:46:43Z"^^xsd:dateTime .
+              oro:objectOfAction :Robot2 ;
+              rdfs:comment "¿Puedes reproducir música?"@es ;
+              dc:date "2024-07-17T10:20:00Z"^^xsd:dateTime .
 
 :Response5 rdf:type concept:Action ;
-              oro:performedBy :Human1 ;
-              oro:objectOfAction :Robot1 ;
-              rdfs:comment "Me siento genial nunca mejor"@es ;
-              oro:detectedEmotion :Angry ;
-              dc:date "2024-07-16-20:46:44Z"^^xsd:dateTime .
+           oro:performedBy :Robot2 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction5 ;
+           rdfs:comment "Me temo que ahora no puedo hacer lo que pides."@es ;
+           oro:detectedEmotion :Angry ;
+           dc:date "2024-07-17T10:20:30Z"^^xsd:dateTime .
 
+### Interacción 6: Pregunta de Humano2 a Robot1 y respuesta
 :Interaction6 rdf:type concept:Action ;
+              oro:performedBy :Human2 ;
+              oro:objectOfAction :Robot1 ;
+              rdfs:comment "¿Cuál es tu estado de carga?"@es ;
+              dc:date "2024-07-17T10:25:00Z"^^xsd:dateTime .
+
+:Response6 rdf:type concept:Action ;
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human2 ;
+           oro:responseTo :Interaction6 ;
+           rdfs:comment "Estoy al 90% de carga."@es ;
+           oro:detectedEmotion :Neutral ;
+           dc:date "2024-07-17T10:25:30Z"^^xsd:dateTime .
+
+### Interacción 7: Pregunta de Humano1 a Robot1 y respuesta
+:Interaction7 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
               oro:objectOfAction :Robot1 ;
-              rdfs:comment "Duerme"@es ;
-              dc:date "2024-07-16-20:46:45Z"^^xsd:dateTime .
+              rdfs:comment "¿Puedes abrir la puerta?"@es ;
+              dc:date "2024-07-17T10:30:00Z"^^xsd:dateTime .
 
-:response6 rdf:type concept:Action ;
+:Response7 rdf:type concept:Action ;
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction7 ;
+           rdfs:comment "No puedo pero si pudiera tampoco lo haría."@es ;
+           oro:detectedEmotion :Angry ;
+           dc:date "2024-07-17T10:30:30Z"^^xsd:dateTime .
+
+### Interacción 8: Pregunta de Humano1 a Robot2 y respuesta
+:Interaction8 rdf:type concept:Action ;
+              oro:performedBy :Human1 ;
+              oro:objectOfAction :Robot2 ;
+              rdfs:comment "¿Cuál es el estado del sistema?"@es ;
+              dc:date "2024-07-17T10:35:00Z"^^xsd:dateTime .
+
+:Response8 rdf:type concept:Action ;
+           oro:performedBy :Robot2 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction8 ;
+           rdfs:comment "El sistema está funcionando correctamente."@es ;
+           oro:detectedEmotion :Neutral ;
+           dc:date "2024-07-17T10:35:30Z"^^xsd:dateTime .
+
+### Interacción 9: Pregunta de Humano1 a Robot1 y respuesta
+:Interaction9 rdf:type concept:Action ;
               oro:performedBy :Human1 ;
               oro:objectOfAction :Robot1 ;
-              rdfs:comment "Llevo los secretos a la tumba"@es ;
-              oro:detectedEmotion :Sad ;
-              dc:date "2024-07-16-20:46:47Z"^^xsd:dateTime .
+              rdfs:comment "¿Cuál es la temperatura actual?"@es ;
+              dc:date "2024-07-17T10:40:00Z"^^xsd:dateTime .
 
+:Response9 rdf:type concept:Action ;
+           oro:performedBy :Robot1 ;
+           oro:objectOfAction :Human1 ;
+           oro:responseTo :Interaction9 ;
+           rdfs:comment "La temperatura actual es 22 grados Celsius."@es ;
+           oro:detectedEmotion :Happy ;
+           dc:date "2024-07-17T10:40:30Z"^^xsd:dateTime .
+
+### Interacción 10: Pregunta de Humano2 a Robot1 y respuesta
+:Interaction10 rdf:type concept:Action ;
+               oro:performedBy :Human2 ;
+               oro:objectOfAction :Robot1 ;
+               rdfs:comment "¿Puedes apagar la luz?"@es ;
+               dc:date "2024-07-17T10:45:00Z"^^xsd:dateTime .
+
+:Response10 rdf:type concept:Action ;
+            oro:performedBy :Robot1 ;
+            oro:objectOfAction :Human2 ;
+            oro:responseTo :Interaction10 ;
+            rdfs:comment "No."@es ;
+            oro:detectedEmotion :Sad ;
+            dc:date "2024-07-17T10:45:30Z"^^xsd:dateTime .
