@@ -93,7 +93,7 @@ with c2:
 with st.sidebar:
     tab_title = '<p style="color:#00629b; font-size: 40px; margin-bottom: 0;">Control Panel</p>'
     st.markdown(tab_title, unsafe_allow_html=True)
-    option = st.radio("Seleccione una opción", ["Subir Nuevo Archivo", "Ver Archivos Guardados"], index=0)
+    option = st.radio("Select an option", ["Upload New File", "View Saved Files"], index=0)
 
 # Cargar el archivo CSS
 def load_css(file_name):
@@ -225,7 +225,7 @@ def cargar_ttl():
     return None
 
 # Lógica de la opción seleccionada en el sidebar
-if option == "Subir Nuevo Archivo":
+if option == "Upload New File":
     # Tabs para la opción de "Subir Nuevo Archivo"
     tab1, tab2, tab3 = st.tabs(["Upload File", "ML Model", "Robot Statistics"])
 
@@ -269,7 +269,7 @@ if option == "Subir Nuevo Archivo":
         if data is None:
             st.warning("No data to display. Please upload a TTL file.")
         
-elif option == "Ver Archivos Guardados":
+elif option == "View Saved Files":
     # Tabs para la opción de "Ver Archivos Guardados"
     tab1, tab2, tab3 = st.tabs(["View Saved Files", "ML Model", "Robot Statistics"])
 
