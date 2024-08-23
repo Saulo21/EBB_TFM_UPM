@@ -7,6 +7,7 @@ import sqlite3
 from io import StringIO
 import streamlit.components.v1 as components
 from data_transformation import transformar_data
+import json
 
 # Configuración de la página
 st.set_page_config(
@@ -14,6 +15,10 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
+
+#################################################
+# FUNCIONES RELACIONADAs CON LA BASE DE DATOS
+#################################################
 
 # Inicializar base de datos
 def init_db():
@@ -62,6 +67,11 @@ def get_file_content(file_id):
     conn.close()
     return file_content
 
+#################################################
+# FUNCIONES RELACIONADAs CON LA BASE DE DATOS HASTA AQUÍ
+#################################################
+
+
 # Logo en la parte superior centrado
 c1, c2, c3 = st.columns([1, 3, 1])
 with c1:
@@ -102,12 +112,16 @@ def load_css(file_name):
 
 load_css("style.css")
 
+################################################
+# FUNCIONES RELACIONADADa CON MLFLOW
+################################################
+
 # Obtener información del experimento
 def get_experiment_info(experiment_id):
-    mlflow_url = "http://localhost:5000"
+    mlflow_url = "http://localhost:8080"
     response = requests.get(
         f"{mlflow_url}/api/2.0/mlflow/experiments/get-by-name",
-        params={"experiment_name": "classification_of_offensive_language20"}
+        params={"experiment_name": experiment_id}
     )
     if response.status_code == 200:
         return response.json()
@@ -115,9 +129,9 @@ def get_experiment_info(experiment_id):
         st.error(f"Error: {response.status_code}, {response.text}")
         return None
 
-# Obtener información de la corrida
+# Obtener información
 def get_run_info(experiment_id):
-    mlflow_url = "http://localhost:5000"
+    mlflow_url = "http://localhost:8080"
     response = requests.post(
         f"{mlflow_url}/api/2.0/mlflow/runs/search",
         json={"experiment_ids": [experiment_id]}
@@ -127,6 +141,13 @@ def get_run_info(experiment_id):
     else:
         st.error(f"Error: {response.status_code}, {response.text}")
         return None
+    
+################################################
+# FUNCIONES RELACIONADADa CON MLFLOW HASTA AQUÍ
+################################################
+
+# Transformar datos en un DataFrame con la estructura deseada
+from models_transformation import transformar_modelos
 
 # Funciones para extraer valores
 def extract_tag_value(tags, key):
@@ -172,7 +193,6 @@ def create_radar_chart(metrics):
     )
 
     return fig
-
 
 # Función para crear gráficos de gauge para las métricas
 def create_gauge_chart(value, title, min_value=0, max_value=1):
@@ -231,13 +251,15 @@ if option == "Upload New File":
 
     with tab1:
         st.markdown("# Upload TTL file")
-        ttl_file = cargar_ttl()
-
         # Inicializar 'data' como None para evitar el error si no se define
         data = None
-    
+        new_data = None
+        
+        ttl_file = cargar_ttl()
+
         if ttl_file is not None:
             st.success("File successfully uploaded")
+            
 
             # Enviar archivo TTL al servidor Flask para procesarlo
             files = {'file': ttl_file.getvalue()}
@@ -248,7 +270,7 @@ if option == "Upload New File":
                 # Convertir la respuesta CSV en un DataFrame
                 csv_content = response_csv.text
                 data = pd.read_csv(StringIO(csv_content))
-
+            
                 st.markdown("# CSV analysis")
                 num_rows = st.slider('Select number of rows to display', 1, 20, 10)
                 st.dataframe(data.head(num_rows))
@@ -273,6 +295,10 @@ elif option == "View Saved Files":
     # Tabs para la opción de "Ver Archivos Guardados"
     tab1, tab2, tab3 = st.tabs(["View Saved Files", "ML Model", "Robot Statistics"])
 
+    # Inicializar 'data' como None para evitar el error si no se define
+    data = None
+    new_data = None
+        
     with tab1:
         st.markdown("# Archivos Guardados")
         files = load_files_from_db()
@@ -300,47 +326,51 @@ elif option == "View Saved Files":
 with tab2:
     st.markdown('# Model Details')
     if data is not None:
-        if 'node1' in data.columns and 'node2' in data.columns:
-            model_names = data[data['node2'] == 'Model']['node1'].unique()
-            results = []
-            for model in model_names:
-                label_value = data[(data['node1'] == model) & (data['label'] == 'type')]['node2'].values
-                label_value1 = data[(data['node1'] == model) & (data['label'] == 'label')]['node2'].values
-                if len(label_value) > 0:
-                    results.append((model, label_value[0], label_value1[0]))
+        # Transformar los datos utilizando la función importada
+        #st.markdown("# CSV analysis")
+        #st.dataframe(data)
+    
+        # Transformar los datos utilizando la función importada
+        new_data = transformar_modelos(data)
+        
+        #st.markdown("# Transformed CSV")
+        #st.dataframe(new_data)
 
-            if results:
-                for model, type_value, name_value in results:
-                    st.markdown(f"""
-                        <div></div>
-                    """, unsafe_allow_html=True)
+        # Crear un desplegable con los valores de la columna 'label'
+        labels = new_data['label'].unique()
+        selected_label = st.selectbox("Select Model", labels)
 
-                    # Obtener la información del experimento y la corrida en un solo recuadro
-                    experiment_info = get_experiment_info(name_value)
-                    if experiment_info:
-                        experiment_details = experiment_info['experiment']
-                        run_info = get_run_info(experiment_details['experiment_id'])
-                        if run_info:
-                            run_details_markup = ""
-                            for run in run_info['runs']:
-                                user = extract_tag_value(run['data']['tags'], 'mlflow.user')
-                                accuracy = extract_metric_value(run['data']['metrics'], 'accuracy')
-                                f1_score = extract_metric_value(run['data']['metrics'], 'f1_score')
-                                loss = extract_metric_value(run['data']['metrics'], 'loss')
-                                false_negatives = extract_metric_value(run['data']['metrics'], 'false_negatives')
-                                false_positives = extract_metric_value(run['data']['metrics'], 'false_positives')
-                                true_negatives = extract_metric_value(run['data']['metrics'], 'true_negatives')
-                                true_positives = extract_metric_value(run['data']['metrics'], 'true_positives')
-                                example_count = extract_metric_value(run['data']['metrics'], 'example_count')
-                                precision_score = extract_metric_value(run['data']['metrics'], 'precision_score')
-                                batch_size = extract_param_value(run['data']['params'], 'batch_size')
-                                epochs = extract_param_value(run['data']['params'], 'epochs')
-                                optimizer = extract_param_value(run['data']['params'], 'optimizer')
-                                embedding_dim = extract_param_value(run['data']['params'], 'embedding_dim')
-                                units_layer_1 = extract_param_value(run['data']['params'], 'units_layer_1')
-                                units_layer_2 = extract_param_value(run['data']['params'], 'units_layer_2')
+        if selected_label:
+            st.markdown('# Model Details')
+            experiment_info = get_experiment_info(selected_label)
+            if experiment_info:
+                experiment_details = experiment_info['experiment']
+                run_info = get_run_info(experiment_details['experiment_id'])
+            
+                if run_info:
+                    run_info_str = json.dumps(run_info, indent=4)
+                    st.download_button(label="Download run info JSON", data=run_info_str, file_name="run_info.json", mime="application/json")
 
-                                run_details_markup += f"""
+                    run_details_markup = ""
+                    for run in run_info['runs']:
+                        user = extract_tag_value(run['data']['tags'], 'mlflow.user')
+                        accuracy = extract_metric_value(run['data']['metrics'], 'accuracy')
+                        f1_score = extract_metric_value(run['data']['metrics'], 'f1_score')
+                        loss = extract_metric_value(run['data']['metrics'], 'loss')
+                        false_negatives = extract_metric_value(run['data']['metrics'], 'false_negatives')
+                        false_positives = extract_metric_value(run['data']['metrics'], 'false_positives')
+                        true_negatives = extract_metric_value(run['data']['metrics'], 'true_negatives')
+                        true_positives = extract_metric_value(run['data']['metrics'], 'true_positives')
+                        example_count = extract_metric_value(run['data']['metrics'], 'example_count')
+                        precision_score = extract_metric_value(run['data']['metrics'], 'precision_score')
+
+                        # Extraer todos los parámetros de manera dinámica
+                        params = run['data']['params']
+                        params_markup = ""
+                        for param in params:
+                            params_markup += f"<p><strong>{param['key'].replace('_', ' ').capitalize()}:</strong> {param['value']}</p>"
+
+                        run_details_markup += f"""
         <div style='background-color:#ffffff; padding:30px; border-radius:15px; margin-bottom:20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);'>
             <div style='display: flex; flex-direction: column; align-items: center;'>
                 <div style='background-color: #e6f4f9; padding:15px; border-radius:10px; margin-bottom:10px; width: 80%;'>
@@ -351,52 +381,48 @@ with tab2:
                 </div>
                 <div style='background-color: #e6f4f9; padding:15px; border-radius:10px; margin-bottom:10px; width: 80%;'>
                     <h3 style='color:#00629b;'>Model Parameters</h3>
-                    <p><strong>Batch Size:</strong> {batch_size}</p>
-                    <p><strong>Epochs:</strong> {epochs}</p>
-                    <p><strong>Optimizer:</strong> {optimizer}</p>
-                    <p><strong>Embedding Dimension:</strong> {embedding_dim}</p>
-                    <p><strong>Units in Layer 1:</strong> {units_layer_1}</p>
-                    <p><strong>Units in Layer 2:</strong> {units_layer_2}</p>
+                    {params_markup}
                 </div>
             </div>
         </div>
     """
-                            st.markdown(run_details_markup, unsafe_allow_html=True)
+                    st.markdown(run_details_markup, unsafe_allow_html=True)
 
-                            col1, col2 = st.columns([2, 2])
-                            with col1:
-                                st.plotly_chart(create_gauge_chart(accuracy, "Accuracy"), use_container_width=True)
-                                st.plotly_chart(create_gauge_chart(precision_score, "Precision Score"), use_container_width=True)
-                            with col2:
-                                st.plotly_chart(create_gauge_chart(f1_score, "F1 Score"), use_container_width=True)
-                                st.plotly_chart(create_gauge_chart(loss, "Loss", min_value=0, max_value=max(1, loss)), use_container_width=True)
+                    col1, col2 = st.columns([2, 2])
+                    with col1:
+                        st.plotly_chart(create_gauge_chart(accuracy, "Accuracy"), use_container_width=True)
+                        st.plotly_chart(create_gauge_chart(precision_score, "Precision Score"), use_container_width=True)
+                    with col2:
+                        st.plotly_chart(create_gauge_chart(f1_score, "F1 Score"), use_container_width=True)
+                        st.plotly_chart(create_gauge_chart(loss, "Loss", min_value=0, max_value=max(1, loss)), use_container_width=True)
 
-                            col1, col2, col3 = st.columns([0.1, 2, 0.1])
-                            with col2:
-                                st.plotly_chart(create_radar_chart({
-                                    'false_negatives': false_negatives,
-                                    'false_positives': false_positives,
-                                    'true_negatives': true_negatives,
-                                    'true_positives': true_positives
-                                }), use_container_width=True)
-                                    
-                            col1, col2, col3 = st.columns([0.1, 2, 0.1])
-                            with col2:
-                                st.markdown(f"""
-                                <div style='background-color:#f0f0f0; padding:20px; border-radius:10px; margin-bottom:10px;'>
-                                    <h4 style='color:#004d80; font-size:24px; margin-bottom:10px;'>Example Count</h4>
-                                    <div style='display: flex; align-items: center; justify-content: center;'>
-                                        <span style='font-size: 30px; font-weight: bold; color: #00629b;'>{example_count}</span>
-                                    </div>
-                                </div>
-                                """, unsafe_allow_html=True)
-                        else:
-                            st.warning(f"Could not retrieve information for experiment ID {name_value}")
+                    col1, col2, col3 = st.columns([0.1, 2, 0.1])
+                    with col2:
+                        st.plotly_chart(create_radar_chart({
+                            'false_negatives': false_negatives,
+                            'false_positives': false_positives,
+                            'true_negatives': true_negatives,
+                            'true_positives': true_positives
+                        }), use_container_width=True)
+                    
+                    col1, col2, col3 = st.columns([0.1, 2, 0.1])
+                    with col2:
+                        st.markdown(f"""
+                        <div style='background-color:#f0f0f0; padding:20px; border-radius:10px; margin-bottom:10px;'>
+                            <h4 style='color:#004d80; font-size:24px; margin-bottom:10px;'>Example Count</h4>
+                            <div style='display: flex; align-items: center; justify-content: center;'>
+                                <span style='font-size: 30px; font-weight: bold; color: #00629b;'>{example_count}</span>
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                else:
+                    st.warning(f"Could not retrieve information for experiment ID {selected_label}")
             else:
-                st.warning("No values found for the specified robots.")
-    else:
-        st.warning("Please upload a file in the specified format in the 'Upload File' tab")
+                st.warning(f"No information found for experiment ID {selected_label}")
 
+        else:
+            st.warning("Please upload a CSV file in the 'Upload CSV' tab")
+    
 # Tab 3: Robot Statistics
 with tab3:
     st.markdown("""
