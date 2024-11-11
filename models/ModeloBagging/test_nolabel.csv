@@ -1,0 +1,391 @@
+id,Model Year,Make,Model,Vehicle Class,Engine Size (L),Cylinders,Transmission,Fuel Type,Fuel Consumption City (L/100 km),Hwy (L/100 km),Comb (L/100 km),Comb (mpg),CO2 Emissions (g/km)
+2be023f9102,2022,Jeep,Wagoneer 4X4,SUV: Standard,5.7,8,A8,X,15.6,11.7,13.8,20,323
+a320ba7de7b,2022,Porsche,718 Boxster,Two-seater,2.0,4,M6,Z,11.7,8.9,10.5,27,245
+2879e8fa078,2022,Chrysler,Grand Caravan,Minivan,3.6,6,A9,X,12.4,8.4,10.6,27,249
+a561b6ee65b,2022,Kia,Sorento AWD,SUV: Small,2.5,4,AM8,X,10.9,8.7,9.9,29,234
+94c225dd8e9,2022,Bentley,Continental GT,Subcompact,4.0,8,AM8,Z,14.9,9.0,12.2,23,287
+a0037d840d8,2022,Porsche,718 Spyder,Two-seater,4.0,6,AM7,Z,13.0,9.9,11.6,24,271
+9fd11982907,2022,Jeep,Cherokee,SUV: Small,2.0,4,A9,X,10.4,7.6,9.1,31,214
+9633b68e37e,2022,Porsche,911 Carrera S Cabriolet,Minicompact,3.0,6,AM8,Z,12.9,10.2,11.7,24,273
+4d5f701cdde,2022,Audi,R8 Spyder Performance quattro,Two-seater,5.2,10,AM7,Z,17.9,12.1,15.3,18,356
+76f30120e22,2022,GMC,Yukon XL 4WD (No Stop-Start),SUV: Standard,6.2,8,A10,Z,17.0,12.7,15.1,19,353
+28c2465b614,2022,BMW,Alpina B8 Gran Coupe,Mid-size,4.4,8,AS8,Z,13.9,9.6,12.0,24,279
+dd33a84c757,2022,Chevrolet,Silverado 4WD,Pickup truck: Standard,6.2,8,A10,Z,15.7,11.9,14.0,20,329
+163f12bd312,2022,Subaru,Outback AWD,SUV: Small,2.4,4,AV8,X,10.1,7.9,9.1,31,213
+88ca1d35cc7,2022,Chevrolet,Tahoe (No Stop-Start),SUV: Standard,5.3,8,A10,X,16.0,11.9,14.1,20,332
+6ac3a95e592,2022,Porsche,911 GT3,Two-seater,4.0,6,AM7,Z,15.6,12.7,14.3,20,334
+ef0de1a875f,2022,GMC,Acadia AWD,SUV: Standard,2.0,4,A9,X,10.8,8.7,9.9,29,232
+3db94cf0ac1,2022,BMW,M850i xDrive Coupe,Subcompact,4.4,8,AS8,Z,13.5,9.3,11.6,24,271
+19fbcce11ce,2022,Acura,TLX SH-AWD,Compact,2.0,4,AS10,Z,11.2,8.0,9.8,29,230
+7060680aff3,2022,Volvo,V60 T6 AWD,Station wagon: Small,2.0,4,AS8,Z,11.3,7.5,9.6,29,224
+360f20f8abe,2022,Buick,Encore GX,SUV: Small,1.2,3,AV,X,8.0,7.6,7.8,36,184
+1fde7e7cb78,2022,Genesis,GV80 AWD,SUV: Standard,2.5,4,AS8,Z,11.3,9.5,10.5,27,248
+3a321ea7ebe,2022,Ford,Mustang Convertible,Subcompact,5.0,8,AS10,X,15.8,10.4,13.4,21,314
+84bab2f9a3e,2022,Audi,A7 Sportback 55 TFSI quattro,Mid-size,3.0,6,AM7,Z,11.1,7.8,9.6,29,224
+9b8de9b7e94,2022,Lexus,RX 350 AWD,SUV: Small,3.5,6,AS8,X,12.2,9.0,10.8,26,252
+9b1ad8f5342,2022,Toyota,Camry AWD SE,Mid-size,2.5,4,AS8,X,9.4,6.8,8.2,34,192
+c7a93e7c9e1,2022,Chevrolet,Blazer AWD,SUV: Small,3.6,6,A9,X,12.6,9.2,11.0,26,259
+1796e50351e,2022,Chevrolet,Suburban 4WD (No Stop-Start),SUV: Standard,6.2,8,A10,Z,17.0,12.7,15.1,19,353
+61751f78a62,2022,Porsche,911 Carrera,Minicompact,3.0,6,AM8,Z,13.1,9.8,11.6,24,275
+839e96db73c,2022,Volvo,S90 B6 AWD,Mid-size,2.0,4,AS8,Z,10.4,7.5,9.1,31,212
+96a21645407,2022,Mazda,MX-5 (SIL),Two-seater,2.0,4,M6,Z,9.0,7.0,8.1,35,189
+cbff162d0bf,2022,Ford,Mustang Mach 1,Subcompact,5.0,8,M6,X,17.1,11.2,14.5,19,339
+0d945610579,2022,Ford,Bronco Sport 4WD,SUV: Small,2.0,4,AS8,X,11.1,9.0,10.2,27,240
+5d625ed87ac,2022,Chevrolet,Suburban,SUV: Standard,3.0,6,A10,D,11.2,8.7,10.1,28,272
+376af82902b,2022,Dodge,Challenger,Mid-size,5.7,8,M6,Z,15.6,10.1,13.1,22,307
+a135e2011cb,2022,Land Rover,Range Rover P525 LWB,SUV: Standard,5.0,8,AS8,Z,14.4,11.3,13.0,22,305
+11f073fbf9c,2022,Hyundai,IONIQ Blue,Full-size,1.6,4,AM6,X,4.0,3.9,4.0,71,94
+1ab4b8ae832,2022,Ford,Escape Hybrid,SUV: Small,2.5,4,AV,X,5.4,6.3,5.8,49,136
+7c7d85e71f1,2022,Kia,Forte,Mid-size,1.6,4,AM7,X,8.7,6.6,7.8,36,184
+53fe064bbbb,2022,Ford,F-150 4X4 FFV,Pickup truck: Standard,5.0,8,AS10,X,14.7,10.8,12.9,22,304
+31f3af1a7d9,2022,Mercedes-Benz,GLE 350 4MATIC SUV,SUV: Standard,2.0,4,A9,Z,12.1,8.9,10.7,26,250
+87205cf8d6e,2022,Ford,Bronco Black Diamond 4WD,SUV: Small,2.3,4,M7,X,13.8,12.4,13.2,21,310
+a74c8a3fdac,2022,Hyundai,Veloster N,Compact,2.0,4,M6,Z,10.6,8.3,9.5,30,226
+14ed1254cf3,2022,Chevrolet,Blazer,SUV: Small,3.6,6,A9,X,12.3,8.8,10.7,26,252
+cb4afc35d21,2022,Dodge,Challenger SRT Hellcat,Mid-size,6.2,8,A8,Z,17.6,10.7,14.5,19,339
+9a44f32c548,2022,BMW,Z4 sDrive30i,Two-seater,2.0,4,AS8,Z,9.4,7.4,8.5,33,199
+afd635f7f6f,2022,Hyundai,Elantra,Mid-size,2.0,4,AV1,X,7.6,5.7,6.7,42,158
+11d565a676f,2022,Audi,SQ7 quattro,SUV: Standard,4.0,8,AS8,Z,16.0,11.4,13.9,20,325
+35724673dfe,2022,Mazda,CX-30 Turbo 4WD,SUV: Small,2.5,4,AS6,X,10.5,7.9,9.3,30,220
+fbf7f7c8523,2022,Cadillac,CT5 AWD,Mid-size,2.0,4,AS10,Z,10.9,7.8,9.5,30,222
+bd4583ce841,2022,Lincoln,Nautilus AWD,SUV: Small,2.7,6,AS8,X,12.6,9.3,11.2,25,262
+81172c6ad69,2022,Mercedes-Benz,GLC 300 4MATIC SUV,SUV: Small,2.0,4,A9,Z,11.5,9.1,10.4,27,242
+bf9fd1b566e,2022,Volkswagen,Golf GTI,Mid-size,2.0,4,AM7,X,9.3,7.0,8.3,34,194
+e0bd5de4641,2022,Mercedes-Benz,Maybach S 680 4MATIC Sedan,Full-size,6.0,12,A9,Z,19.4,11.2,15.7,18,369
+c7c97efd2fd,2022,Volvo,S60 B5 AWD,Compact,2.0,4,AS8,Z,9.4,6.9,8.3,34,193
+f6d81d5c40a,2022,Audi,A5 Cabriolet 45 TFSI quattro,Subcompact,2.0,4,AM7,Z,10.4,7.5,9.1,31,214
+96d2c926dd3,2022,GMC,Sierra 4WD Mud Terrain Tire,Pickup truck: Standard,5.3,8,A8,X,16.9,13.3,15.3,18,359
+e9835555f6f,2022,Jeep,Wrangler JL Unlimited 4X4 eTorque,SUV: Small,3.6,6,A8,X,12.3,9.9,11.2,25,262
+6e8b85e3ec1,2022,Chevrolet,Colorado,Pickup truck: Small,2.8,4,A6,D,11.8,7.9,10.1,28,270
+18ac3932b79,2022,Jeep,Renegade 4X4 Trailhawk,SUV: Small,1.3,4,A9,X,10.8,8.7,9.9,29,231
+2a962653209,2022,Jeep,Compass,SUV: Small,2.4,4,A6,X,10.6,7.6,9.3,30,218
+3d150ebbe94,2022,GMC,Yukon XL,SUV: Standard,3.0,6,A10,D,11.2,8.7,10.1,28,272
+2ca9a5254d4,2022,Mitsubishi,RVR,SUV: Small,2.0,4,AV6,X,9.7,7.8,8.8,32,206
+8d6e1df8c82,2022,Ram,ProMaster City,Special purpose vehicle,2.4,4,A9,X,11.2,8.3,9.9,29,232
+eb98a3e05d1,2022,Bugatti,Chiron,Two-seater,8.0,16,AM7,Z,26.8,16.6,22.2,13,522
+71bed81c731,2022,Ford,F-150 4X4,Pickup truck: Standard,3.5,6,AS10,X,13.5,10.3,12.1,23,284
+4ba8bd9225d,2022,BMW,M8 Cabriolet,Subcompact,4.4,8,AS8,Z,16.1,11.0,13.8,20,322
+83fac5779f3,2022,Porsche,911 Carrera 4 Cabriolet,Minicompact,3.0,6,AM8,Z,13.1,9.7,11.6,24,275
+293ae7d9b00,2022,Land Rover,Range Rover Sport P360,SUV: Standard,3.0,6,AS8,Z,12.7,9.9,11.4,25,269
+5e57bffc4fe,2022,Honda,CR-V AWD,SUV: Small,1.5,4,AV,X,8.7,7.4,8.1,35,189
+f2f01134e82,2022,MINI,Cooper S Convertible,Minicompact,2.0,4,AM7,Z,8.8,6.5,7.8,36,182
+c3825b75992,2022,GMC,Yukon 4WD (No Stop-Start),SUV: Standard,5.3,8,A10,X,17.0,12.7,15.1,19,354
+601198f8877,2022,Honda,Accord,Full-size,1.5,4,AV,X,7.8,6.5,7.2,39,168
+abb8e72a508,2022,Ford,Escape AWD,SUV: Small,1.5,3,A8,X,9.0,7.6,8.4,34,198
+9f20e3a6aa4,2022,BMW,750Li xDrive Sedan,Full-size,4.4,8,AS8,Z,13.9,9.6,12.0,24,279
+9d263384e46,2022,Toyota,Tacoma 4WD,Pickup truck: Small,3.5,6,AS6,X,13.0,10.5,11.8,24,278
+a02751901f1,2022,Ford,Mustang,Subcompact,2.3,4,AS10,X,11.4,7.9,9.8,29,231
+09b4c4101cf,2022,BMW,X6 xDrive40i,SUV: Standard,3.0,6,AS8,Z,11.3,9.2,10.4,27,241
+daa8a76141d,2022,Bentley,Bentayga Speed,SUV: Standard,6.0,12,AS8,Z,19.0,13.0,16.3,17,383
+d0bd016c475,2022,Chevrolet,Trax AWD,SUV: Small,1.4,4,AS6,X,10.2,7.7,9.1,31,214
+173998c73ea,2022,Lexus,NX 250 AWD,SUV: Small,2.5,4,AS8,X,9.4,7.4,8.4,34,198
+93aa75e8834,2022,Lexus,NX 350h AWD,SUV: Small,2.5,4,AV6,Z,5.7,6.4,6.0,47,140
+1f58cbf1db5,2022,Dodge,Challenger SRT Hellcat,Mid-size,6.2,8,M6,Z,18.1,11.4,15.1,19,352
+73f050cc69d,2022,Ford,Bronco Sport 4WD,SUV: Small,1.5,3,A8,X,9.3,8.4,8.9,32,209
+304d4194d55,2022,BMW,Alpina XB7,SUV: Standard,4.4,8,AS8,Z,15.7,11.5,13.8,20,321
+7a0e3c469e3,2022,Ram,1500 4X4 eTorque,Pickup truck: Standard,3.6,6,A8,X,12.2,9.7,11.1,25,260
+48b4e61caf0,2022,Jeep,Renegade,SUV: Small,1.3,4,A9,X,9.8,7.4,8.7,32,204
+4a6321b150d,2022,Maserati,Levante Modena V8,SUV: Standard,3.8,8,A8,Z,17.4,12.0,15.0,19,349
+7b66e7513f9,2022,Chevrolet,Silverado 4WD Mud Terrain Tire FFV,Pickup truck: Standard,5.3,8,A6,X,17.4,14.7,16.2,17,380
+54cf520d296,2022,BMW,X4 M40i,SUV: Small,3.0,6,AS8,Z,11.2,9.1,10.3,27,241
+6465db5f12d,2022,Honda,Civic Sedan Si,Mid-size,1.5,4,M6,Z,8.7,6.4,7.7,37,180
+698b695443b,2022,Chevrolet,Silverado 4WD,Pickup truck: Standard,5.3,8,A8,X,15.6,11.9,13.9,20,327
+13205c9f7ea,2022,Subaru,Forester AWD,SUV: Small,2.5,4,AV7,X,9.0,7.2,8.2,34,192
+7b4b35977ee,2022,GMC,Acadia AWD,SUV: Standard,3.6,6,A9,X,12.6,9.2,11.0,26,259
+cb5e1a4f83c,2022,Porsche,Panamera 4S,Full-size,2.9,6,AM8,Z,12.8,9.8,11.4,25,276
+7c6e4ebe365,2022,Ford,Expedition 4X4,SUV: Standard,3.5,6,AS10,X,14.8,10.6,12.9,22,304
+85581a4c21b,2022,Porsche,Panamera GTS ST,Full-size,4.0,8,AM8,Z,15.7,11.8,13.9,20,323
+0028e21c39b,2022,Land Rover,Range Rover P525,SUV: Standard,5.0,8,AS8,Z,14.4,11.3,13.0,22,305
+5c63c4f9742,2022,Volkswagen,Atlas Cross Sport 4MOTION,SUV: Small,2.0,4,AS8,X,11.6,9.7,10.7,26,252
+1042ceff095,2022,Kia,Carnival,Minivan,3.5,6,AS8,X,12.0,8.9,10.6,27,252
+aa29ff583cc,2022,Rolls-Royce,Ghost,Full-size,6.7,12,AS8,Z,19.9,12.7,16.7,17,387
+adf7be4e258,2022,Porsche,911 Targa 4 GTS,Minicompact,3.0,6,M7,Z,14.7,10.2,12.7,22,296
+6e93a21e172,2022,Volkswagen,Jetta,Compact,1.5,4,AS8,X,7.7,5.7,6.8,42,159
+31da1c16559,2022,Porsche,Macan GTS,SUV: Small,2.9,6,AM7,Z,13.5,10.7,12.2,23,290
+01897a2e12e,2022,Mercedes-Benz,E 350 4MATIC Sedan,Mid-size,2.0,4,A9,Z,11.2,8.2,9.8,29,229
+de477dde2e5,2022,Subaru,Impreza 5-Door AWD,Station wagon: Small,2.0,4,M5,X,10.1,7.7,9.0,31,211
+808144390c7,2022,Land Rover,Discovery Sport P250,SUV: Small,2.0,4,AS9,Z,12.7,10.0,11.5,25,271
+67e6c36af15,2022,Mercedes-Benz,GLB 250 4MATIC SUV,SUV: Small,2.0,4,AM8,Z,10.9,7.9,9.5,30,224
+989d4e08ab4,2022,Infiniti,Q50 AWD,Mid-size,3.0,6,AS7,Z,12.5,8.7,10.8,26,254
+1fe7c92c1d2,2022,Buick,Enclave AWD,SUV: Standard,3.6,6,A9,X,13.6,9.6,11.8,24,277
+8cc35c70f5b,2022,Ford,Escape AWD,SUV: Small,2.0,4,A8,X,10.5,7.5,9.2,31,216
+a46de212d19,2022,Mazda,Mazda3 5-Door (SIL),Mid-size,2.0,4,M6,X,8.7,6.6,7.8,36,181
+f231e384fcb,2022,Bugatti,Chiron Super Sport,Two-seater,8.0,16,AM7,Z,30.3,20.9,26.1,11,608
+1495784b607,2022,Ford,Maverick Hybrid,Pickup truck: Small,2.5,4,AV,X,5.6,7.1,6.3,45,147
+eb650e51f7f,2022,Toyota,RAV4 AWD (Stop/Start),SUV: Small,2.5,4,AS8,X,8.8,7.1,8.0,35,187
+de6e9d5218a,2022,GMC,Sierra 4WD Mud Terrain Tire,Pickup truck: Standard,3.0,6,A10,D,11.8,10.3,11.2,25,298
+9fd1faadf6a,2022,Jaguar,F-TYPE P450 Convertible,Two-seater,5.0,8,AS8,Z,14.1,9.7,12.1,23,286
+851f64456bb,2022,Jaguar,F-PACE P340,SUV: Small,3.0,6,AS8,Z,12.0,8.8,10.6,27,250
+5c829a289b0,2022,Subaru,BRZ,Minicompact,2.4,4,M6,Z,12.0,8.8,10.5,27,247
+6b5a8551a91,2022,Ram,1500 eTorque,Pickup truck: Standard,5.7,8,A8,X,13.0,10.0,11.7,24,275
+a0e1651ad5c,2022,Honda,Odyssey,Minivan,3.5,6,AS10,X,12.2,8.5,10.6,27,248
+4baae8112a1,2022,MINI,John Cooper Works Convertible,Minicompact,2.0,4,AS8,Z,9.6,7.2,8.5,33,198
+e6abcdb4e5d,2022,Lexus,ES 300h,Mid-size,2.5,4,AV6,X,5.5,5.2,5.3,53,124
+89e447a0b85,2022,BMW,330i xDrive Sedan,Compact,2.0,4,AS8,Z,9.5,6.9,8.3,34,195
+c92373bae3e,2022,Cadillac,CT4 AWD,Compact,2.7,4,AS10,Z,11.4,8.2,10.0,28,233
+9b5c4653bce,2022,Mercedes-Benz,AMG E 53 4MATIC+ Coupe,Subcompact,3.0,6,A9,Z,11.7,8.4,10.2,28,239
+e8e922e5604,2022,Chevrolet,Equinox,SUV: Small,1.5,4,A6,X,8.9,7.7,8.4,34,198
+16cfcad3b9d,2022,Porsche,911 Carrera 4S Cabriolet,Minicompact,3.0,6,AM8,Z,12.8,10.2,11.7,24,273
+5ba683dd764,2022,Chevrolet,Silverado 4WD,Pickup truck: Standard,5.3,8,A10,X,14.7,11.8,13.4,21,314
+fd17e5dc897,2022,Nissan,Qashqai AWD,Station wagon: Small,2.0,4,AV8,X,9.0,7.5,8.3,34,196
+3df9cb675fd,2022,Land Rover,Discovery P300,SUV: Standard,2.0,4,AS8,Z,12.2,10.6,11.5,25,271
+1c3c5daff73,2022,Nissan,Altima AWD,Mid-size,2.5,4,AV,X,9.1,6.5,7.9,36,186
+f72d837eff8,2022,Chevrolet,Silverado,Pickup truck: Standard,2.7,4,A8,X,12.5,10.6,11.6,24,274
+1737fb70238,2022,Jeep,Gladiator 4X4 EcoDiesel,Pickup truck: Standard,3.0,6,A8,D,10.8,8.5,9.8,29,263
+72eab9a6fd9,2022,Ram,1500 4X4 TRX,Pickup truck: Standard,6.2,8,A8,Z,22.4,16.5,19.8,14,465
+68cc6eba8af,2022,Jeep,Wrangler JL Unlimited 4X4,SUV: Small,6.4,8,A8,Z,18.5,14.1,16.5,17,387
+f18cae18697,2022,MINI,Cooper 5 Door,Subcompact,1.5,3,M6,Z,8.7,6.3,7.6,37,177
+07c2022834b,2022,Porsche,718 Spyder,Two-seater,4.0,6,M6,Z,14.0,10.1,12.2,23,286
+bfbe0fb443a,2022,Ford,Expedition Timberline 4X4 (Without Stop-Start),SUV: Standard,3.5,6,AS10,X,15.2,12.3,13.9,20,326
+fcd4fb389e4,2022,Hyundai,Venue,Mid-size,1.6,4,M6,X,8.6,6.8,7.8,36,184
+8710a0b3cf0,2022,Honda,HR-V AWD,Station wagon: Small,1.8,4,AV,X,8.8,7.5,8.2,34,193
+318c261279c,2022,Ford,F-150 Raptor 4X4 (Without Stop-Start),Pickup truck: Standard,3.5,6,AS10,X,16.8,13.2,15.2,19,357
+baf106c4dab,2022,Audi,Q7 55 TFSI quattro,SUV: Standard,3.0,6,AS8,Z,12.8,10.5,11.7,24,273
+c024289b332,2022,Lexus,ES 350,Mid-size,3.5,6,AS8,X,10.7,7.3,9.2,31,214
+7eee5d666c9,2022,Porsche,Panamera 4S Executive,Full-size,2.9,6,AM8,Z,13.8,10.2,12.2,23,292
+7d12fb9f6c9,2022,Chevrolet,Suburban 4WD,SUV: Standard,3.0,6,A10,D,11.7,9.0,10.5,27,281
+583ef1ba1f7,2022,Acura,ILX,Compact,2.4,4,AM8,Z,9.9,7.0,8.6,33,200
+a2f458bcbc2,2022,BMW,M3 Competition Sedan,Compact,3.0,6,AS8,Z,14.5,10.2,12.6,22,292
+53b2e905f99,2022,Ford,F-150 FFV,Pickup truck: Standard,5.0,8,AS10,X,14.4,10.8,12.8,22,300
+65891dac46f,2022,Ford,F-150 4X4 (Without Stop-Start),Pickup truck: Standard,3.5,6,AS10,X,14.6,11.0,13.0,22,304
+6b91c9cc2a9,2022,Toyota,Corolla Hybrid,Compact,1.8,4,AV,X,4.4,4.5,4.5,63,106
+5e7897fbe91,2022,Ford,F-150 Hybrid,Pickup truck: Standard,3.5,6,AS10,X,9.8,9.7,9.7,29,228
+6e1499e5930,2022,Lincoln,Aviator AWD,SUV: Standard,3.0,6,AS10,X,13.7,9.7,11.9,24,280
+940e2f6f884,2022,Hyundai,Tucson,SUV: Small,2.5,4,AS8,X,9.1,7.1,8.2,34,194
+4b46e964b55,2022,Audi,S7 Sportback quattro,Mid-size,2.9,6,AS8,Z,12.8,8.5,10.9,26,254
+ab72008b288,2022,Jeep,Gladiator 4X4,Pickup truck: Standard,3.6,6,M6,X,14.3,10.4,12.6,22,296
+27c591bf85f,2022,BMW,M240i xDrive Coupe,Subcompact,3.0,6,AS8,Z,10.4,7.5,9.1,31,212
+66fd66bb3ae,2022,Ford,Explorer Timberline AWD (Without Stop-Start),SUV: Standard,2.3,4,AS10,X,12.5,11.0,11.8,24,277
+f2b942165a4,2022,Volvo,V90 CC B6 AWD,Station wagon: Mid-size,2.0,4,AS8,Z,10.6,8.1,9.5,30,222
+a109c972869,2022,Kia,K5,Full-size,2.5,4,AM8,X,9.9,7.3,8.7,32,207
+99e982d57ca,2022,Ford,Transit Connect Van,Special purpose vehicle,2.0,4,AS8,X,9.8,8.9,9.4,30,221
+638e8da9e1d,2022,Toyota,Camry Hybrid SE/XLE/XSE,Mid-size,2.5,4,AV,X,5.3,5.0,5.1,55,121
+74890461be3,2022,Audi,RS Q8 quattro,SUV: Standard,4.0,8,AS8,Z,18.0,12.3,15.4,18,360
+2bff1704d77,2022,Dodge,Challenger,Mid-size,6.4,8,M6,Z,16.7,10.4,13.9,20,325
+dbc5493341f,2022,Jeep,Wrangler JL Unlimited 4X4,SUV: Small,2.0,4,A8,X,11.5,9.9,10.8,26,251
+91635ca80e1,2022,Land Rover,Range Rover P360,SUV: Standard,3.0,6,AS8,Z,13.3,10.2,11.9,24,279
+25e0450e6f1,2022,Kia,K5 AWD,Full-size,1.6,4,AS8,X,9.2,7.0,8.2,34,195
+ec38cced8db,2022,Chevrolet,Silverado 4WD,Pickup truck: Standard,3.0,6,A10,D,10.9,9.1,10.1,28,272
+3022d6e0318,2022,Chevrolet,Traverse,SUV: Standard,3.6,6,A9,X,13.0,8.8,11.1,25,260
+4c2d37eb93e,2022,BMW,M5 Sedan,Mid-size,4.4,8,AS8,Z,16.1,11.0,13.8,20,322
+37f3fd2a560,2022,Land Rover,Range Rover SVAutobiography LWB,SUV: Standard,5.0,8,AS8,Z,17.9,12.7,15.5,18,365
+69bab5b69e0,2022,MINI,Cooper Convertible,Minicompact,1.5,3,AM7,Z,8.2,6.2,7.3,39,170
+f4cb465cc95,2022,Mercedes-Benz,AMG GLE 53 4MATIC+ Coupe,SUV: Standard,3.0,6,A9,Z,13.6,11.1,12.5,23,292
+a3b4ccda9d0,2022,Porsche,911 Targa 4 GTS,Minicompact,3.0,6,AM8,Z,13.6,10.7,12.3,23,287
+b1f161bf013,2022,Lexus,ES 250 AWD,Mid-size,2.5,4,AS8,X,9.5,7.0,8.4,34,195
+d6dd3c4cf80,2022,Audi,A6 Sedan 45 TFSI quattro,Mid-size,2.0,4,AM7,Z,10.2,7.4,8.9,32,208
+f66aa73969e,2022,Hyundai,Sonata,Full-size,2.5,4,AS8,X,8.8,6.4,7.7,37,182
+7050854f71c,2022,Volkswagen,Tiguan 4MOTION,SUV: Small,2.0,4,AS8,X,10.6,8.0,9.4,30,222
+0507622af80,2022,GMC,Canyon 4WD,Pickup truck: Small,3.6,6,A8,X,14.0,9.9,12.1,23,283
+c02fac7de05,2022,Toyota,Corolla Cross AWD,SUV: Small,2.0,4,AV10,X,8.1,7.4,7.8,36,182
+25a62d22e3e,2022,Porsche,Panamera GTS,Full-size,4.0,8,AM8,Z,15.7,11.2,13.7,21,323
+b0dd85aaddf,2022,Cadillac,CT4,Compact,2.0,4,AS8,Z,10.2,7.0,8.8,32,206
+ca3cddbec33,2022,Toyota,Prius,Mid-size,1.8,4,AV,X,4.4,4.7,4.5,63,106
+c7f7feab7b5,2022,Nissan,Altima AWD SR/Platinum,Mid-size,2.5,4,AV,X,9.3,6.7,8.1,35,190
+6f257eb3d5b,2022,GMC,Yukon XL 4WD,SUV: Standard,3.0,6,A10,D,11.7,9.0,10.5,27,281
+749c8d3974f,2022,Dodge,Charger SRT Hellcat Widebody,Full-size,6.2,8,A8,Z,19.0,11.5,15.6,18,368
+c099a389099,2022,Chevrolet,Silverado 4WD (With Sport Mode),Pickup truck: Standard,5.3,8,A10,X,15.3,12.3,13.9,20,327
+bd2dd7a263b,2022,Mercedes-Benz,Maybach S 580 4MATIC Sedan,Full-size,4.0,8,A9,Z,15.2,9.9,12.9,22,301
+830b66a9648,2022,Dodge,Challenger Widebody,Mid-size,6.4,8,M6,Z,16.7,10.4,13.9,20,325
+97fc1e5efe9,2022,BMW,M340i xDrive Sedan,Compact,3.0,6,AS8,Z,10.4,7.7,9.2,31,214
+a5025fabf58,2022,Mercedes-Benz,G 550 SUV,SUV: Standard,4.0,8,A9,Z,16.3,13.7,15.1,19,354
+bb61850a584,2022,Mercedes-Benz,GLA 250 4MATIC SUV,SUV: Small,2.0,4,AM8,Z,10.3,7.3,9.0,31,210
+22a44be4fcd,2022,Audi,S6 Sedan quattro,Mid-size,2.9,6,AS8,Z,12.8,8.5,10.9,26,254
+71b2fc10302,2022,GMC,Yukon 4WD,SUV: Standard,6.2,8,A10,Z,16.3,12.7,14.7,19,345
+fa875c90b33,2022,Cadillac,XT6 AWD,SUV: Small,2.0,4,AS9,Z,11.2,9.0,10.2,28,239
+be8387ba244,2022,Jeep,Wrangler JL Unlimited 4X4 EcoDiesel,SUV: Small,3.0,6,A8,D,10.6,8.1,9.5,30,255
+20fdda86a43,2022,Cadillac,CT5-V AWD,Mid-size,3.0,6,AS10,Z,12.8,9.1,11.1,25,260
+92bf67ed761,2022,Dodge,Durango AWD,SUV: Standard,3.6,6,A8,X,12.7,9.6,11.3,25,265
+2e8309a8bcc,2022,Chevrolet,Trailblazer,SUV: Small,1.2,3,AV,X,8.0,7.6,7.8,36,184
+7a5fff8a2e3,2022,Porsche,718 Boxster T,Two-seater,2.0,4,M6,Z,11.7,8.9,10.5,27,245
+36419a8e357,2022,Porsche,Cayenne GTS Coupe,SUV: Standard,4.0,8,AS8,Z,15.2,12.4,14.0,20,326
+0b65cdb092e,2022,Audi,A4 allroad 45 TFSI quattro,Station wagon: Small,2.0,4,AM7,Z,9.8,7.9,8.9,32,208
+b3f17e30b44,2022,Ford,Explorer Hybrid AWD,SUV: Standard,3.3,6,AS10,X,10.1,9.0,9.6,29,225
+0a4888eab74,2022,Subaru,WRX AWD,Mid-size,2.4,4,AV8,Z,12.7,9.4,11.2,25,262
+d6a9998864d,2022,Hyundai,Kona N,SUV: Small,2.0,4,AM8,Z,11.8,8.7,10.4,27,246
+aad66f464db,2022,Jaguar,XF P300 AWD,Mid-size,2.0,4,AS8,Z,10.6,7.7,9.3,30,219
+e789935018c,2022,Chevrolet,Tahoe 4WD,SUV: Standard,3.0,6,A10,D,11.7,9.0,10.5,27,281
+6e0573bd5af,2022,Mercedes-Benz,AMG CLA 35 4MATIC Coupe,Compact,2.0,4,AM7,Z,11.0,8.2,9.7,29,227
+d6e79443900,2022,Porsche,911 Carrera 4S,Minicompact,3.0,6,M7,Z,13.8,9.3,11.8,24,275
+72034771fe0,2022,Ford,F-150 (Without Stop-Start),Pickup truck: Standard,2.7,6,AS10,X,13.5,10.1,12.0,24,282
+6a3fc8bbedc,2022,Honda,Civic Sedan,Mid-size,1.5,4,AV7,X,7.6,6.1,6.9,41,162
+ae252f4afe8,2022,Chevrolet,Spark,Subcompact,1.4,4,M5,X,8.0,6.2,7.2,39,170
+5d49bb84cc0,2022,Volvo,XC40 T5 AWD,SUV: Small,2.0,4,AS8,Z,10.7,7.7,9.4,30,219
+93e186f8766,2022,Subaru,WRX AWD,Mid-size,2.4,4,M6,Z,12.3,9.0,10.8,26,254
+f8c68ea1c6e,2022,Mazda,Mazda3 4-Door (SIL),Compact,2.0,4,M6,X,8.7,6.4,7.7,37,180
+e3eeb404ba0,2022,Porsche,Macan,SUV: Small,2.0,4,AM7,Z,12.4,9.3,11.0,26,263
+44deb19dfc9,2022,Chevrolet,Silverado FFV,Pickup truck: Standard,5.3,8,A6,E,21.5,16.0,19.1,15,321
+1aff54cec96,2022,Mercedes-Benz,AMG GLA 45 4MATIC SUV,Station wagon: Small,2.0,4,AM8,Z,12.3,9.6,11.1,25,260
+07c015a7f20,2022,MINI,Cooper S 3 Door,Subcompact,2.0,4,M6,Z,10.5,7.3,9.1,31,211
+66fde19997e,2022,Maserati,Quattroporte Modena AWD,Full-size,3.0,6,A8,Z,14.8,9.8,12.6,22,293
+3845ddd95dc,2022,Land Rover,New Range Rover P530 LWB,SUV: Standard,4.4,8,AS8,Z,15.2,11.0,13.3,21,314
+3433383755c,2022,Ford,Transit Connect Van FFV,Special purpose vehicle,2.0,4,AS8,X,9.8,8.9,9.4,30,221
+2210f89ef9a,2022,Ford,Explorer AWD,SUV: Standard,3.0,6,A10,X,13.4,9.8,11.8,24,277
+ad4b5199ff9,2022,BMW,X4 M,SUV: Small,3.0,6,AS8,Z,15.7,11.7,13.9,20,323
+4a579774c85,2022,Alfa Romeo,Giulia,Mid-size,2.0,4,A8,Z,10.0,7.2,8.7,32,205
+f48690eddee,2022,Jeep,Gladiator 4X4,Pickup truck: Standard,3.6,6,A8,X,13.7,10.7,12.3,23,290
+1af02613bf8,2022,GMC,Yukon 4WD,SUV: Standard,3.0,6,A10,D,11.7,9.0,10.5,27,281
+da243690f9c,2022,Volkswagen,Atlas Cross Sport 4MOTION,SUV: Small,3.6,6,AS8,X,13.1,10.0,11.7,24,275
+6c3184ed094,2022,Toyota,Camry TRD,Mid-size,3.5,6,AS8,X,10.8,7.6,9.4,30,220
+3d0707239b1,2022,Lincoln,Nautilus AWD,SUV: Small,2.0,4,AS8,X,11.8,9.4,10.7,26,251
+4bb4e917735,2022,Acura,TLX SH-AWD A-SPEC,Compact,2.0,4,AS10,Z,11.3,8.1,9.8,29,231
+b165cc6babb,2022,Subaru,Outback Wilderness AWD,SUV: Small,2.4,4,AV8,X,10.9,8.9,10.0,28,235
+bbab26ecce4,2022,Mitsubishi,RVR 4WD,SUV: Small,2.4,4,AV6,X,10.3,8.3,9.4,30,218
+e160fa2214b,2022,Mercedes-Benz,E 450 4MATIC Sedan,Mid-size,3.0,6,A9,Z,10.5,7.9,9.3,30,218
+921e40f4d68,2022,Ford,Edge AWD,SUV: Small,2.7,6,AS8,X,12.6,9.3,11.2,25,262
+5c86aaca989,2022,Mercedes-Benz,Metris Cargo Van LWB,Special purpose vehicle,2.0,4,A9,Z,12.6,10.1,11.5,25,267
+dc81d449843,2022,Ford,Bronco 4WD,SUV: Small,2.7,6,AS10,X,12.8,11.9,12.4,23,291
+761eb6360ae,2022,Honda,HR-V AWD,Station wagon: Small,1.8,4,AV7,X,9.1,7.7,8.5,33,200
+79ee9914dff,2022,Volvo,XC90 T5 AWD,SUV: Standard,2.0,4,AS8,Z,11.5,8.4,10.1,28,236
+b6c4cadfa07,2022,Chevrolet,Blazer AWD,SUV: Small,2.0,4,A9,X,10.8,8.7,9.9,29,232
+427afada6e1,2022,Chevrolet,Silverado 4WD Mud Terrain Tire,Pickup truck: Standard,5.3,8,A8,X,16.9,13.3,15.3,18,359
+a9edd9cce41,2022,Mazda,CX-30 4WD,SUV: Small,2.5,4,AS6,X,9.9,7.7,8.9,32,208
+297802dafae,2022,Ford,F-150 FFV,Pickup truck: Standard,3.3,6,AS10,E,16.8,12.8,15.0,19,249
+b09c5c781f0,2022,Land Rover,Range Rover Sport P525,SUV: Standard,5.0,8,AS8,Z,14.1,10.7,12.6,22,294
+0803ba2cec6,2022,Jeep,Cherokee 4X4 Active Drive Lock,SUV: Small,3.2,6,A9,X,12.9,9.7,11.5,25,268
+f3c970e54fe,2022,GMC,Sierra 4WD (No Stop-Start),Pickup truck: Standard,5.3,8,A10,X,16.1,12.4,14.4,20,338
+afd26c8771c,2022,Land Rover,Range Rover Evoque P250,SUV: Small,2.0,4,AS9,Z,11.9,8.8,10.5,27,247
+18ec0d63689,2022,Chevrolet,Colorado,Pickup truck: Small,3.6,6,A8,X,12.9,9.3,11.3,25,263
+08e397e1f07,2022,Audi,SQ5 Sportback quattro,SUV: Small,3.0,6,AS8,Z,12.5,9.7,11.2,25,262
+70a0c99c2c5,2022,Toyota,Highlander Hybrid AWD,SUV: Standard,2.5,4,AV,X,6.7,6.8,6.7,42,158
+0318504a82d,2022,Audi,A6 allroad 55 TFSI quattro,Station wagon: Mid-size,3.0,6,AM7,Z,11.5,8.3,10.0,28,234
+28e20c64c6a,2022,Lexus,RX 350 L AWD,SUV: Small,3.5,6,AS8,X,13.1,9.4,11.1,25,268
+498e1aece1a,2022,Nissan,Armada 4WD,SUV: Standard,5.6,8,AS7,Z,17.5,12.9,15.4,18,362
+7d8a23acea9,2022,Ford,F-150 4X4,Pickup truck: Standard,2.7,6,AS10,X,12.9,10.1,11.7,24,274
+cc57d7f6fb8,2022,Land Rover,Discovery P360,SUV: Standard,3.0,6,AS8,Z,12.8,9.8,11.4,25,270
+1c3ae4372d5,2022,Audi,A4 Sedan 45 TFSI quattro,Compact,2.0,4,AM7,Z,9.8,7.6,8.8,32,205
+2c5ff71c03b,2022,Mercedes-Benz,E 450 4MATIC Coupe,Subcompact,3.0,6,A9,Z,11.0,8.0,9.6,29,225
+624d2ab3dbb,2022,BMW,M4 Coupe,Subcompact,3.0,6,M6,Z,14.7,10.1,12.6,22,293
+893ea25bd69,2022,Subaru,Crosstrek AWD,SUV: Small,2.0,4,AV8,X,8.5,7.0,7.9,36,184
+1386afe214a,2022,Genesis,G70 AWD,Compact,3.3,6,AS8,Z,13.5,9.1,11.5,25,273
+44b8d16badc,2022,Lexus,RX 450h L AWD,SUV: Standard,3.5,6,AV6,Z,8.1,8.4,8.1,35,190
+f2fd86b1dc7,2022,Buick,Encore AWD,SUV: Small,1.4,4,AS6,X,10.2,7.7,9.1,31,214
+8969025ed06,2022,Infiniti,QX80 4WD,SUV: Standard,5.6,8,AS7,Z,17.5,12.2,15.1,19,355
+87fa61f849f,2022,Kia,Seltos AWD,SUV: Small,2.0,4,AV8,X,8.8,7.6,8.2,34,195
+a4b1bbfe887,2022,Chevrolet,Silverado 4WD Mud Terrain Tire FFV,Pickup truck: Standard,5.3,8,A6,E,23.1,19.6,21.5,13,358
+64916cdb9e4,2022,Lexus,RC 300 AWD,Subcompact,3.5,6,AS6,Z,12.2,9.0,10.8,26,253
+249bd28db80,2022,Audi,R8 Coupe Performance,Two-seater,5.2,10,AM7,Z,16.7,10.3,13.8,20,322
+f33336d95a2,2022,Hyundai,Elantra Hybrid Blue,Mid-size,1.6,4,AM6,X,4.5,4.2,4.4,64,103
+ae34e99f65c,2022,Bentley,Flying Spur,Mid-size,6.0,12,AM8,Z,19.2,12.2,16.0,18,373
+ac09ccb7a4e,2022,Mercedes-Benz,AMG C 43 4MATIC Cabriolet,Subcompact,3.0,6,A9,Z,12.7,8.7,10.9,26,256
+afe681672a1,2022,Hyundai,Kona AWD,SUV: Small,1.6,4,AM7,X,8.8,7.4,8.2,34,193
+c476ef11f67,2022,Ram,1500 HFE eTorque,Pickup truck: Standard,3.6,6,A8,X,11.6,9.0,10.4,27,245
+3d7e27fac4f,2022,Dodge,Challenger (MDS),Mid-size,6.4,8,A8,Z,15.8,9.6,13.0,22,305
+94c7216495d,2022,Buick,Envision AWD,SUV: Small,2.0,4,AS9,X,10.5,8.2,9.5,30,220
+e6e94226aaf,2022,Toyota,Corolla XSE,Compact,2.0,4,AV10,X,7.7,6.1,7.0,40,164
+68bd93d09ce,2022,Lamborghini,Huracan evo Coupe,Two-seater,5.2,10,AM7,Z,18.0,12.9,15.7,18,371
+cb1813273e0,2022,Jeep,Grand Cherokee 4X4,SUV: Standard,5.7,8,A8,X,16.7,10.9,14.1,20,331
+bc0aad7ecf4,2022,Mazda,CX-5 4WD,SUV: Small,2.5,4,AS6,X,10.2,8.2,9.3,30,216
+12effb276fe,2022,Genesis,G70 AWD,Compact,2.0,4,AS8,Z,11.4,8.2,10.0,28,236
+94e22afbc50,2022,Volkswagen,Golf R,Mid-size,2.0,4,AM7,Z,10.3,7.7,9.1,31,213
+93289ba1d46,2022,Chevrolet,Silverado 4WD FFV,Pickup truck: Standard,5.3,8,A6,E,22.0,16.4,19.5,14,326
+30e16190e9c,2022,Toyota,Sienna,Minivan,2.5,4,AV,X,6.6,6.5,6.6,43,154
+966d23413ea,2022,MINI,John Cooper Works Countryman ALL4,Mid-size,2.0,4,AS8,Z,10.4,7.8,9.2,31,210
+47eb0a25044,2022,Ford,Explorer AWD,SUV: Standard,3.0,6,AS10,X,13.4,9.8,11.8,24,277
+86dda66d1ba,2022,Honda,Pilot AWD,SUV: Small,3.5,6,AS9,X,12.4,9.3,11.0,26,256
+8dbc99c9e45,2022,Chevrolet,Suburban 4WD,SUV: Standard,6.2,8,A10,Z,16.3,12.7,14.7,19,345
+f85edc98762,2022,Honda,HR-V,Station wagon: Small,1.8,4,AV,X,8.4,7.0,7.8,36,181
+1958e5ebc3e,2022,Ford,Ranger 4WD (Without Stop-Start),Pickup truck: Standard,2.3,4,AS10,X,12.4,9.7,11.2,25,262
+a03fbd8a57b,2022,BMW,M850i xDrive Gran Coupe,Mid-size,4.4,8,AS8,Z,13.9,9.6,12.0,24,279
+b5b4d23c103,2022,Audi,TT Roadster 45 TFSI quattro,Two-seater,2.0,4,AM7,X,10.5,7.9,9.4,30,218
+fb80eabbc34,2022,Ford,Shelby GT500 Mustang,Subcompact,5.2,8,AM7,Z,19.9,12.7,16.7,17,392
+5c9cca669d6,2022,Hyundai,Veloster N,Compact,2.0,4,AM8,Z,12.0,8.6,10.5,27,248
+becfbe27484,2022,BMW,530i xDrive Sedan,Mid-size,2.0,4,AS8,Z,10.1,7.4,8.9,32,206
+a00df618a7a,2022,Kia,Niro Touring,Station wagon: Small,1.6,4,AM6,X,5.0,5.6,5.3,53,124
+59274274162,2022,Porsche,Panamera Turbo S,Full-size,4.0,8,AM8,Z,15.3,11.2,13.5,21,326
+e040489468b,2022,Land Rover,Range Rover Evoque P300,SUV: Small,2.0,4,AS9,Z,11.3,9.1,10.3,27,244
+1929506708a,2022,Ford,Edge AWD,SUV: Small,2.0,4,A8,X,11.5,8.4,10.1,28,238
+886b4289279,2022,Nissan,Maxima,Mid-size,3.5,6,AV7,Z,11.6,7.9,9.9,29,233
+a20485f239b,2022,Chevrolet,Equinox AWD,SUV: Small,1.5,4,A6,X,9.4,8.0,8.8,32,208
+eb474ad448f,2022,Lamborghini,Aventador Countach,Two-seater,6.5,12,AM7,Z,26.5,14.6,21.2,13,489
+97a5aa46bbd,2022,Jaguar,E-PACE P300,SUV: Small,2.0,4,AS9,Z,11.2,9.2,10.3,27,245
+b425af43fb4,2022,Bentley,Bentayga,SUV: Standard,4.0,8,AS8,Z,15.8,9.9,13.2,21,309
+f941a7c351c,2022,Mercedes-Benz,AMG CLS 53 4MATIC+ Coupe,Compact,3.0,6,A9,Z,11.6,8.8,10.3,27,241
+008baf297b8,2022,Mercedes-Benz,AMG G 63 4x4 Squared,SUV: Standard,4.0,8,A9,Z,21.5,18.7,20.2,14,470
+40ae216c5e2,2022,Toyota,Corolla,Compact,2.0,4,M6,X,8.2,6.5,7.4,38,172
+1db38dc69b6,2022,Dodge,Durango AWD SRT,SUV: Standard,6.4,8,A8,Z,18.3,12.2,15.6,18,363
+edba15398ba,2022,Chevrolet,Silverado 4WD Mud Terrain Tire (No Stop-Start),Pickup truck: Standard,5.3,8,A10,X,16.8,13.9,15.5,18,364
+4871703e631,2022,Mercedes-Benz,AMG GLC 43 4MATIC Coupe,SUV: Small,3.0,6,A9,Z,14.0,10.1,12.3,23,287
+cdcaba9b1eb,2022,Ford,Bronco 4WD,SUV: Small,2.3,4,M7,X,12.1,11.4,11.8,24,277
+1d36f0a472d,2022,Nissan,Kicks,Mid-size,1.6,4,AV,X,7.7,6.6,7.2,39,169
+f36c7141bd5,2022,Lincoln,Nautilus AWD,SUV: Small,2.0,4,A8,X,11.8,9.4,10.7,26,252
+b2038c59833,2022,Porsche,718 Cayman,Two-seater,2.0,4,AM7,Z,11.0,8.7,10.0,28,233
+a2a0699a12b,2022,Land Rover,Defender 90 P400,SUV: Standard,3.0,6,AS8,Z,13.5,10.8,12.3,23,287
+12bb89c670b,2022,Cadillac,XT5 AWD,SUV: Small,3.6,6,AS9,X,12.9,9.2,11.2,25,263
+1d3378fef6f,2022,GMC,Yukon XL 4WD,SUV: Standard,5.3,8,A10,X,15.9,12.4,14.3,20,336
+e7d7ef84c49,2022,Jeep,Grand Cherokee L 4X4,SUV: Standard,3.6,6,A8,X,13.0,9.4,11.3,25,266
+d5209c0d28f,2022,Lexus,LS 500 AWD,Mid-size,3.4,6,AS10,Z,13.8,8.7,11.2,25,270
+f0f5a62d98c,2022,Honda,Civic Hatchback,Full-size,2.0,4,AV,X,8.0,6.2,7.2,39,167
+2c60a301afb,2022,Toyota,Camry XSE V6,Mid-size,3.5,6,AS8,X,10.7,7.4,9.2,31,215
+5bfba007e8b,2022,Jaguar,F-TYPE P450 Convertible AWD,Two-seater,5.0,8,AS8,Z,15.2,9.8,12.7,22,299
+299e97e5089,2022,BMW,540i xDrive Sedan,Full-size,3.0,6,AS8,Z,10.5,8.1,9.4,30,219
+56b3ea90c42,2022,Cadillac,XT4 AWD,SUV: Small,2.0,4,AS9,Z,10.9,8.2,9.7,29,225
+30a71f19dcd,2022,Jeep,Wrangler JL 4X4,SUV: Small,3.6,6,M6,X,13.7,9.6,11.8,24,277
+8921fc9f235,2022,Lexus,LX 600,SUV: Standard,3.4,6,AS10,Z,14.2,10.8,12.7,22,298
+1b9330ae7b5,2022,Honda,Accord Hybrid,Full-size,2.0,4,AV,X,5.0,5.0,5.0,56,117
+0ecf59464d1,2022,BMW,M5 Competition,Mid-size,4.4,8,AS8,Z,16.1,11.0,13.8,20,322
+991cd35f10e,2022,Cadillac,XT4,SUV: Small,2.0,4,AS9,Z,10.0,7.8,9.0,31,211
+4020ac98e03,2022,Hyundai,Tucson Hybrid,SUV: Small,1.6,4,AM6,X,6.3,6.6,6.4,44,152
+3796a7570f5,2022,GMC,Acadia,SUV: Standard,3.6,6,A9,X,12.3,8.8,10.7,26,252
+a85a775444f,2022,Mercedes-Benz,AMG C 43 4MATIC Coupe,Subcompact,3.0,6,A9,Z,12.6,8.5,10.8,26,252
+4307d2e0089,2022,Audi,A6 Sedan 55 TFSI quattro,Mid-size,3.0,6,AM7,Z,11.1,7.8,9.6,29,224
+035d691cecc,2022,Ford,F-150 Raptor 37 4X4,Pickup truck: Standard,3.5,6,AS10,X,16.0,14.4,15.3,18,359
+cc52460cd6c,2022,Ford,F-150 4X4 FFV (Without Stop-Start),Pickup truck: Standard,5.0,8,AS10,E,20.7,14.2,17.8,16,295
+efacf1424ad,2022,Volkswagen,Taos 4MOTION,SUV: Small,1.5,4,A7,X,9.5,7.4,8.5,33,200
+835732ee721,2022,Jeep,Renegade 4X4,SUV: Small,1.3,4,A9,X,10.1,8.1,9.2,31,222
+11ea1af9390,2022,Chevrolet,Silverado FFV,Pickup truck: Standard,5.3,8,A6,X,16.2,12.3,14.5,19,341
+9a7c878a0dc,2022,Audi,S4 Sedan quattro,Compact,3.0,6,AS8,Z,11.1,8.0,9.7,29,227
+c551f19a4d6,2022,Audi,S5 Sportback quattro,Mid-size,3.0,6,AS8,Z,11.1,8.0,9.7,29,227
+f9067839bfe,2022,Ford,Bronco Sasquatch 4WD,SUV: Small,2.7,6,AS10,X,14.1,14.1,14.1,20,331
+a1625d487c6,2022,Chevrolet,Tahoe,SUV: Standard,5.3,8,A10,X,15.8,11.8,14.0,20,327
+edb2a42499c,2022,Buick,Encore GX,SUV: Small,1.3,3,AV,X,8.2,7.4,7.9,36,185
+45849c52918,2022,BMW,750i xDrive Sedan,Full-size,4.4,8,AS8,Z,13.9,9.6,12.0,24,279
+059fd7648ee,2022,Subaru,Forester Wilderness AWD,SUV: Small,2.5,4,AV8,X,9.5,8.3,9.0,31,210
+bb30e58395b,2022,Ford,Mustang,Subcompact,2.3,4,M6,X,11.5,8.2,10.0,28,236
+87bf2085497,2022,Nissan,Frontier,Pickup truck: Standard,3.8,6,AS9,X,12.8,9.5,11.3,25,266
+a83bf07713e,2022,Rolls-Royce,Phantom EWB,Full-size,6.7,12,AS8,Z,20.0,11.8,16.3,17,382
+4dfdd849712,2022,Mercedes-Benz,AMG GLS 63 4MATIC+ SUV,SUV: Standard,4.0,8,A9,Z,17.1,13.2,15.3,18,360
+d499d0b075f,2022,Porsche,911 Turbo S Cabriolet,Minicompact,3.7,6,AM8,Z,16.0,11.8,14.1,20,328
+b5ccd435437,2022,Ford,Mustang Convertible (High Performance),Subcompact,2.3,4,AS10,X,12.1,8.9,10.7,26,252
+fbc20206a26,2022,Audi,Q3 40 TFSI quattro,SUV: Small,2.0,4,AS8,X,10.4,7.7,9.2,31,215
+c6cfab48832,2022,Honda,Civic Hatchback,Full-size,1.5,4,M6,X,8.5,6.3,7.5,38,175
+338d0ac3aad,2022,Lexus,UX 250h AWD,Compact,2.0,4,AV6,X,5.7,6.2,6.0,47,140
+8ac2bc1fcf3,2022,Bentley,Continental GT Convertible,Minicompact,4.0,8,AM8,Z,15.2,9.2,12.5,23,294
+e6c5d9f04de,2022,Ford,Mustang Convertible,Subcompact,2.3,4,A10,X,11.7,8.1,10.1,28,237
+86e670a97f3,2022,BMW,Z4 M40i,Two-seater,3.0,6,AS8,Z,10.8,8.1,9.6,29,223
+6143054f10a,2022,GMC,Sierra 4WD,Pickup truck: Standard,5.3,8,A10,X,14.9,12.0,13.6,21,318
+268dbebe3ca,2022,Subaru,Crosstrek AWD,SUV: Small,2.0,4,M6,X,10.5,8.1,9.4,30,220
+2a4fc7c32d5,2022,Ford,F-150 (Without Stop-Start),Pickup truck: Standard,3.5,6,AS10,X,13.7,10.0,12.0,24,281
+9b75e02ae69,2022,Acura,MDX Type S,SUV: Standard,3.0,6,AS10,Z,13.8,11.2,12.4,23,291
+0b9c375ba5e,2022,BMW,M850i xDrive Cabriolet,Subcompact,4.4,8,AS8,Z,13.9,9.6,12.0,24,279
+adcf59d4183,2022,Volkswagen,Golf R,Mid-size,2.0,4,M6,Z,11.8,8.3,10.2,28,237
+ab62e0eada8,2022,Ford,F-150 Raptor 4X4,Pickup truck: Standard,3.5,6,AS10,X,15.8,13.2,14.6,19,344
+09ae2556f9b,2022,Ford,Mustang Convertible,Subcompact,2.3,4,AS10,X,12.0,8.5,10.4,27,244
+adb7db0f9f6,2022,Kia,Rio,Compact,1.6,4,M6,X,7.7,6.1,7.0,40,166
+1b9a2997f61,2022,Jeep,Wrangler JL 4X4 eTorque,SUV: Small,3.6,6,A8,X,12.0,9.8,11.0,26,258
+67ecd53937c,2022,Ford,F-150 FFV (Without Stop-Start),Pickup truck: Standard,5.0,8,AS10,X,14.7,10.6,12.9,22,302
+0730af78b8a,2022,Ford,Transit Connect Van,Special purpose vehicle,2.5,4,AS6,X,12.0,8.9,10.6,27,249
+f90a000acea,2022,Buick,Enclave,SUV: Standard,3.6,6,A9,X,13.0,9.1,11.2,25,263
+d66737ffc4a,2022,Ford,Explorer AWD,SUV: Standard,2.3,4,A10,X,11.7,8.6,10.3,27,242
+be832afd13d,2022,Rolls-Royce,Cullinan,Station wagon: Mid-size,6.7,12,AS8,Z,20.1,12.1,16.5,17,386
+38e76c38fa2,2022,BMW,X1 xDrive28i,SUV: Small,2.0,4,AS8,Z,10.3,7.7,9.1,31,213
+9381485a097,2022,Mitsubishi,Mirage,Compact,1.2,3,M5,X,7.1,5.8,6.5,43,151
+588e7b5c96b,2022,Bentley,Continental GT Convertible Speed,Minicompact,6.0,12,AM8,Z,20.3,12.9,17.0,17,395
+2383ae6e39f,2022,Toyota,Corolla Hatchback,Compact,2.0,4,M6,X,8.4,6.7,7.6,37,179
+38e5c23a96b,2022,Kia,Forte,Mid-size,2.0,4,AV,X,7.9,5.9,7.0,40,165
+736742793ca,2022,Toyota,Highlander Hybrid AWD Limited/Platinum,SUV: Standard,2.5,4,AV,X,6.6,6.8,6.7,42,156
+75dad6fd614,2022,GMC,Sierra,Pickup truck: Standard,5.3,8,A10,X,14.4,11.3,13.0,22,305
+61c15c058a5,2022,Ford,Explorer AWD (Without Stop-Start),SUV: Standard,2.3,4,A10,X,12.0,9.0,10.7,26,252
+9f7042427c5,2022,Lexus,UX 200,Mid-size,2.0,4,AS10,X,8.0,6.3,7.2,39,168
+a2448f29e75,2022,Subaru,BRZ,Minicompact,2.4,4,AS6,Z,11.0,7.7,9.5,30,224
+3b48dd4151e,2022,Acura,RDX SH-AWD A-SPEC,SUV: Small,2.0,4,AS10,Z,11.3,9.1,10.3,27,242
+214b29764cc,2022,Porsche,Panamera,Full-size,2.9,6,AM8,Z,13.1,9.8,11.6,24,274
+408421263c2,2022,Nissan,Sentra SR,Mid-size,2.0,4,M6,X,9.4,6.4,8.1,35,189
+1bcf92cd95a,2022,Maserati,Ghibli GT,Mid-size,3.0,6,A8,Z,13.4,9.4,11.6,24,271
+f34ba58de87,2022,Chevrolet,Camaro ZL1,Subcompact,6.2,8,AS10,Z,18.3,11.2,15.1,19,355
+16a6dabc385,2022,Jeep,Grand Cherokee L 4X4,SUV: Standard,5.7,8,A8,X,16.7,10.9,14.1,20,331
+57e82961151,2022,Jeep,Wrangler JL 4X4,SUV: Small,2.0,4,A8,X,10.7,9.8,10.3,27,241
+cb37ae8f0fd,2022,Lamborghini,Aventador Ultimae Coupe,Two-seater,6.5,12,AM7,Z,26.8,15.1,21.5,13,498
+6da7a57b43b,2022,Porsche,718 Cayman GTS 4.0,Two-seater,4.0,6,AM7,Z,12.3,9.8,11.1,25,260
+634dd375b56,2022,Volvo,XC40 T4 AWD,SUV: Small,2.0,4,AS8,X,10.7,7.6,9.3,30,217
+fd4ef28db51,2022,Hyundai,Sonata Hybrid,Full-size,2.0,4,AM6,X,5.3,4.6,5.0,56,117
