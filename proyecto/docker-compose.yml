@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  flask_app:
+    build:
+      context: ./flask_app
+      dockerfile: Dockerfile  # Asegúrate de tener un Dockerfile en flask_app
+    networks:
+      - internal_network
+
+  streamlit_app:
+    build:
+      context: ./streamlit_app
+      dockerfile: Dockerfile  # Asegúrate de tener un Dockerfile en streamlit_app
+    ports:
+      - "8501:8501"  # Expone el puerto para la aplicación Streamlit
+    environment:
+      - FLASK_API_URL=http://flask_app:5000  # URL interna para acceder a Flask
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    driver: bridge
+

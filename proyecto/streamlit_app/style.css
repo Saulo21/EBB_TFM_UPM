@@ -1,0 +1,89 @@
+/* style.css */
+
+/* Fondo de la página */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.stTitle {
+    color: #00629b;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Subtítulos */
+.stMarkdown h1 {
+    color: #00629b;
+    font-size: 35px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.stMarkdown h2 {
+    color: #007acc;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stMarkdown h3 {
+    color: #008bde;
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Cuadro de carga de archivos */
+.css-1dp5vir {
+    border: 2px solid #00629b;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Botón de éxito */
+.css-1cpxqw2 {
+    background-color: #007acc !important;
+    color: white !important;
+}
+
+/* Mensajes de éxito */
+.stAlert {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+/* Mensajes de advertencia */
+.stAlert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+/* Dataframes */
+.stDataFrame {
+    border: 2px solid #00629b;
+    border-radius: 10px;
+}
+
+/* Ajustes de tabla */
+.css-1ojgh9m {
+    border-collapse: collapse;
+}
+
+.css-1ojgh9m th, .css-1ojgh9m td {
+    border: 1px solid #00629b;
+    padding: 8px;
+}
+
+.css-1ojgh9m th {
+    background-color: #007acc;
+    color: white;
+}
+
+.css-1ojgh9m tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
